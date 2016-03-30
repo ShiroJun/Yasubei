@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Box
   - Item
+  - Tile
   layers:
   - Default
   - TransparentFX
