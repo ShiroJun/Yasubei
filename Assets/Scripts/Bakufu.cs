@@ -27,7 +27,7 @@ public class Bakufu : MonoEX {
             Destroy(c.gameObject);
         }
 
-        if (c.tag == "Bomb")
+        if (c.tag == "BombAfter")
         {        
             Transform pos = c.transform;
             Destroy(c.gameObject);

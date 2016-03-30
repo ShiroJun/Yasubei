@@ -14,7 +14,7 @@ public class BombCreator : MonoEX
 
     public void BombCreat()
     {
-        if (Input.GetMouseButtonDown(0)|| Input.GetKeyDown("space"))
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown("space"))
         {
             GameObject go = instantiateGameObject("Prefab/Bomb");
             go.transform.position = pos.transform.position;
