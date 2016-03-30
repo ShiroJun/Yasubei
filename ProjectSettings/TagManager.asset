@@ -4,12 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Bomb
+  - BombBefore
   - Bakufu
   - Enemy
   - Box
   - Item
   - Tile
+  - BombAfter
   layers:
   - Default
   - TransparentFX

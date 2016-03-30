@@ -4,7 +4,7 @@ using System.Collections;
 public class Bomb : MonoEX {
 
     void Start () {
-        Invoke("BombEX", 3);
+        Invoke("BombEX", 5);
     }
     void Update () {
 
