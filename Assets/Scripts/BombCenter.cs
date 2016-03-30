@@ -5,11 +5,21 @@ public class BombCenter : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+	    
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+	    
 	}
+
+    void OnTriggerEnter(Collider c)
+    {
+        if (c.tag == "Bomb")
+        {
+            c.transform.position = gameObject.transform.position;
+            c.tag = ("BombAfter");
+
+        }
+    }
 }
