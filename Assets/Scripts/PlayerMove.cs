@@ -3,6 +3,7 @@ using System.Collections;
 
 public class PlayerMove : MonoEX {
     public float speed;
+	GameObject gameController;
     void Start()
     {
         Invoke("Destroy", 100);
@@ -26,7 +27,24 @@ public class PlayerMove : MonoEX {
         //{
         //    transform.Rotate(0, 90, 0);
         //}
-
-
     }
+	void OnTriggerEnter (Collider hit){
+		if (hit.CompareTag ("Item")) {
+			if (hit.name.IndexOf ("ExPow") != -1) {
+				gameController = GameObject.Find ("GameController");
+				gameController.GetComponent<GameController> ().ExPow += 1;
+				Debug.Log ("EX" + gameController.GetComponent<GameController> ().ExPow);
+			}
+			else if (hit.name.IndexOf ("SpPow") != -1) {
+				gameController = GameObject.Find ("GameController");
+				gameController.GetComponent<GameController> ().SpPow += 1;
+				Debug.Log ("SP" + gameController.GetComponent<GameController> ().SpPow);
+			}
+			else if (hit.name.IndexOf ("Invent") != -1) {
+				gameController = GameObject.Find ("GameController");
+				gameController.GetComponent<GameController> ().Invent += 1;
+				Debug.Log ("In" + gameController.GetComponent<GameController> ().Invent);
+			}
+		}
+	}
 }
