@@ -4,10 +4,8 @@ using System.Collections;
 public class WoodenCrateRed : MonoEX {
 	GameObject gameController;
 	void Start () {
-		Invoke("Destroy", 1);
-		//Invoke(Item(), 1.3);
-		Item();
-
+		Invoke("Destroy", 1.02f);
+		Invoke("Item", 1.02f);
     }
 	void Item(){
 		int ran = Random.Range (0, 5);			//15分の１の確率でアイテム出現
