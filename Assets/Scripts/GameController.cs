@@ -3,12 +3,8 @@ using System.Collections;
 
 public class GameController : MonoBehaviour {
 	public GameObject[] Items;
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+	public int ExPow = 1;
+	public int SpPow = 1;
+	public int Invent = 1;
+
 }
