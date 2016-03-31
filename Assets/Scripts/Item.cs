@@ -3,8 +3,6 @@ using System.Collections;
 
 public class Item : MonoBehaviour
 {
-	private bool damage = false;
-	// トリガーとの接触時に呼ばれるコールバック
 	void OnTriggerEnter (Collider hit)
 	{
 		//Invoke("Invincible", 1);
@@ -18,10 +16,5 @@ public class Item : MonoBehaviour
 			// このコンポーネントを持つGameObjectを破棄する
 			Destroy(gameObject);
 		}
-	}
-
-	void Invincible()
-	{
-		damage = true;
 	}
 }
