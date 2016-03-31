@@ -4,18 +4,23 @@ using System.Collections;
 public class PlayerMove : MonoEX {
     public float speed;
 	GameObject gameController;
+	private float SPPOW;
     void Start()
     {
         Invoke("Destroy", 100);
     }
     //private float y = 90;
     // Update is called once per frame
+	void Update() {
+		gameController = GameObject.Find ("GameController");
+		SPPOW = speed *gameController.GetComponent<GameController> ().SpPow;
+	}
     void FixedUpdate () {
 
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
-        transform.Translate(x * speed, 0, z * speed);
+		transform.Translate(x * SPPOW, 0, z * SPPOW);
 
 
         //if (Input.GetKey(KeyCode.LeftArrow))
