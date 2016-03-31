@@ -11,6 +11,7 @@ TagManager:
   - Item
   - Tile
   - BombAfter
+  - Wall
   layers:
   - Default
   - TransparentFX
