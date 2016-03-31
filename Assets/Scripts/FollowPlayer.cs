@@ -15,7 +15,6 @@ public class FollowPlayer : MonoBehaviour
 	{
 
 		transform.position = new Vector3(target.position.x, 10, 2);
-		Debug.Log (target.position.x);
 		if(transform.position.x < left){
 			transform.position = new Vector3(left, 10, 2);
 		}
