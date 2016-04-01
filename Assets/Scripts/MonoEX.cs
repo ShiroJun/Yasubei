@@ -12,14 +12,17 @@ public class MonoEX : MonoBehaviour {
         }
         return go;
     }
-    //public IEnumerator DelayMethod(float waitTime)
-    //{
-    //    yield return new WaitForSeconds(waitTime);
-    //}
+
     public void Destroy()
     {
         Destroy(gameObject);
     }
+
+    //public IEnumerator DelayMethod(float waitTime)
+    //{
+    //    yield return new WaitForSeconds(waitTime);
+    //}
+
 
 
 }
