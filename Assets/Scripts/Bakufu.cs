@@ -8,7 +8,6 @@ public class Bakufu : MonoEX {
         Invoke("Destroy", 1);
     }
 	
-	// Update is called once per frame
 	void Update () {
 
     }
@@ -31,6 +30,10 @@ public class Bakufu : MonoEX {
 		{
 			Destroy(c.gameObject);
 		}
+        if (c.tag == "Wall")
+        {
+            Destroy();
+        }
 
         if (c.tag == "BombAfter")
         {        
