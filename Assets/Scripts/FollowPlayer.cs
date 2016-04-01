@@ -14,13 +14,13 @@ public class FollowPlayer : MonoBehaviour
 	void Update ()
 	{
 
-		transform.position = new Vector3(target.position.x, 10, 2);
+		transform.position = new Vector3(target.position.x, 10,-2);
 		if(transform.position.x < left){
-			transform.position = new Vector3(left, 10, 2);
+			transform.position = new Vector3(left, 10, -2);
 		}
 
 		if(transform.position.x >= right){
-			transform.position = new Vector3(right, 10, 2);
+			transform.position = new Vector3(right, 10, -2);
 		}
 	}
 }
