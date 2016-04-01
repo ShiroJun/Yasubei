@@ -46,6 +46,11 @@ MonoBehaviour:
   ExPow: 1
   SpPow: 1
   Invent: 1
+  timer: 0
+  timerText: {fileID: 0}
+  ExText: {fileID: 0}
+  SpText: {fileID: 0}
+  InvText: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
