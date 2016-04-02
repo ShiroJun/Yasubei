@@ -9,6 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 447492}
   - 114: {fileID: 11430730}
+  - 114: {fileID: 11435234}
   - 82: {fileID: 8288246}
   m_Layer: 0
   m_Name: GameController
@@ -91,7 +92,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -118,14 +119,25 @@ MonoBehaviour:
   - {fileID: 159056, guid: 5ad1c9e821b2aa541aa3ba9862108b20, type: 2}
   - {fileID: 122370, guid: a44798da96a46874e89792cd837e38f2, type: 2}
   - {fileID: 179148, guid: 0d8feaf207cee7241990bf60b821a001, type: 2}
-  ExPow: 1
+  ExPow: 3
   SpPow: 1
-  Invent: 1
-  timer: 5
-  timerText: {fileID: 0}
-  ExText: {fileID: 0}
-  SpText: {fileID: 0}
-  InvText: {fileID: 0}
+  Invent: 3
+--- !u!114 &11435234
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 123030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 019d6b471e7d87e438430af1bdf81d06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pos: {fileID: 0}
+  FirewrksMixs:
+  - {fileID: 108688, guid: 09b3899239c54c0408dacffe6309f67a, type: 2}
+  - {fileID: 193280, guid: 847b306130757f944af87b4a2ee6fb60, type: 2}
+  - {fileID: 176746, guid: b8856c7f77121de468e170a8aa09d11f, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

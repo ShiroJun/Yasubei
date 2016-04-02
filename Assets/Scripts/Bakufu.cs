@@ -4,11 +4,13 @@ using System.Collections;
 public class Bakufu : Bomb
 {
     GameObject gameController;
-    void Start () {
+    void Start()
+    {
         Invoke("Destroy", 0.9f);
     }
-	
-	void Update () {
+
+    void Update()
+    {
 
     }
 
@@ -41,14 +43,10 @@ public class Bakufu : Bomb
 
                 gameController = GameObject.Find("GameController");
                 int pow = gameController.GetComponent<GameController>().ExPow;
-
-                Instantiate(FirewrksMixs[pow - 1], pos.transform.position, pos.transform.rotation);
+                GameObject[] bomb = gameController.GetComponent<BombCreator>().FirewrksMixs;
+                Instantiate(bomb[pow - 1], pos.transform.position, pos.transform.rotation);
 
             }
         }
-       
-       
     }
-
-
 }

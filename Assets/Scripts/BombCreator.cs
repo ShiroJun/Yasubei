@@ -7,16 +7,14 @@ public class BombCreator : MonoEX
     GameObject gameController;
     int bombCount;
     GameObject[] bombObjects;
+    public GameObject[] FirewrksMixs = new GameObject[3];
 
     void Update()
     {
         BombCreat();
     }
-
-
     public void BombCreat()
     {
-
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown("space"))
         {
             gameController = GameObject.Find("GameController");
@@ -31,8 +29,6 @@ public class BombCreator : MonoEX
                 GameObject go = instantiateGameObject("Prefab/Bomb");
                 go.transform.position = pos.transform.position;
             }
-       
         }
     }
-
 }
