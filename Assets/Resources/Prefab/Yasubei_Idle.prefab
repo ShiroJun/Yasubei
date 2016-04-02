@@ -674,6 +674,8 @@ GameObject:
   - 114: {fileID: 11477838}
   - 54: {fileID: 5466086}
   - 136: {fileID: 13655236}
+  - 114: {fileID: 11487972}
+  - 135: {fileID: 13543934}
   m_Layer: 0
   m_Name: Yasubei_Idle
   m_TagString: Untagged
@@ -758,7 +760,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 193504}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.55, y: 0.497, z: 0.34}
+  m_LocalPosition: {x: 10.72, y: 0.497, z: 6.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 452936}
@@ -1387,7 +1389,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 193504}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78fa540770a1b7f45b77034b423a1319, type: 3}
   m_Name: 
@@ -1405,6 +1407,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pos: {fileID: 193504}
+--- !u!114 &11487972
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 193504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5677705c7b0984144a9fbc902ae857b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.05
+--- !u!135 &13543934
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 193504}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 11.11
+  m_Center: {x: 0, y: 1.67, z: 0}
 --- !u!136 &13655236
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -1415,7 +1441,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.37
-  m_Height: 1.72
+  m_Height: 1.94
   m_Direction: 1
   m_Center: {x: 0, y: 0.88, z: 0}
 --- !u!137 &13789870

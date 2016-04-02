@@ -4,24 +4,19 @@ using System.Collections;
 public class Bakufu : Bomb
 {
     GameObject gameController;
-    void Start () {
+    void Start()
+    {
         Invoke("Destroy", 0.9f);
     }
-	
-	void Update () {
+
+    void Update()
+    {
 
     }
 
     void OnTriggerStay(Collider c)
     {
         {
-            if (c.tag == "Box")
-            {
-                Transform pos = c.transform;
-                Destroy(c.gameObject);
-                GameObject go = instantiateGameObject("Prefab/WoodenCrateRed");
-                go.transform.position = pos.transform.position;
-            }
 
             if (c.tag == "Player")
             {
@@ -41,14 +36,10 @@ public class Bakufu : Bomb
 
                 gameController = GameObject.Find("GameController");
                 int pow = gameController.GetComponent<GameController>().ExPow;
-
-                Instantiate(FirewrksMixs[pow - 1], pos.transform.position, pos.transform.rotation);
+                GameObject[] bomb = gameController.GetComponent<BombCreator>().FirewrksMixs;
+                Instantiate(bomb[pow - 1], pos.transform.position, pos.transform.rotation);
 
             }
         }
-       
-       
     }
-
-
 }
