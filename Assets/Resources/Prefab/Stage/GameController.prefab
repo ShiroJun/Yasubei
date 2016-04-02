@@ -138,6 +138,8 @@ MonoBehaviour:
   - {fileID: 108688, guid: 09b3899239c54c0408dacffe6309f67a, type: 2}
   - {fileID: 193280, guid: 847b306130757f944af87b4a2ee6fb60, type: 2}
   - {fileID: 176746, guid: b8856c7f77121de468e170a8aa09d11f, type: 2}
+  - {fileID: 187588, guid: 493c839f73896af469a35fb33ead1e09, type: 2}
+  - {fileID: 135210, guid: 31aa95edf4bfab74e85547b5f7e38002, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

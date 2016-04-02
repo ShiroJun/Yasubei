@@ -17,13 +17,6 @@ public class Bakufu : Bomb
     void OnTriggerStay(Collider c)
     {
         {
-            if (c.tag == "Box")
-            {
-                Transform pos = c.transform;
-                Destroy(c.gameObject);
-                GameObject go = instantiateGameObject("Prefab/WoodenCrateRed");
-                go.transform.position = pos.transform.position;
-            }
 
             if (c.tag == "Player")
             {
