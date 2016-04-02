@@ -4,7 +4,11 @@ using System.Collections;
 public class ContactTrigger : MonoBehaviour {
 
 	public bool Trigger00 = false;
-	public bool Trigger01 = false;
+	public bool Trigger01  = false;
+	public bool Trigger02  = false;
+	public bool ItemTrigger1 = false;
+	public bool ItemTrigger2 = false;
+	public bool ItemTrigger3 = false;
 	void Start () {
 	
 	}
@@ -19,8 +23,23 @@ public class ContactTrigger : MonoBehaviour {
 		if (hit.name.IndexOf ("Trigger00") != -1) {
 			Trigger00 = true;
 		}
-		else if (hit.CompareTag ("Item")) {
+		else if (hit.name.IndexOf ("Trigger01") != -1) {
 			Trigger01 = true;
+		}
+		else if (hit.name.IndexOf ("Trigger02") != -1) {
+			Trigger02 = true;
+		}
+		else if (hit.CompareTag ("Item")) {
+			if (hit.name.IndexOf ("ExPow") != -1) {
+				ItemTrigger1 = true;
+			}
+			else if (hit.name.IndexOf ("SpPow") != -1) {
+				ItemTrigger2 = true;
+			}
+			else if (hit.name.IndexOf ("Invent") != -1) {
+				ItemTrigger3 = true;
+			}
+
 		}
 	}
 }
