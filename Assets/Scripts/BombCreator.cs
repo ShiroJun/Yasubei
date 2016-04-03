@@ -1,10 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class BombCreator : MonoEX
 {
     public GameObject pos;
+    public GameObject bomb;
+    int x;
+    int z;
     GameObject gameController;
+    GameObject player;
     int bombCount;
     GameObject[] bombObjects;
     public GameObject[] FirewrksMixs = new GameObject[3];
@@ -25,9 +30,11 @@ public class BombCreator : MonoEX
 
             if (bombCount < Invent)
             {
+
                 GameObject.Find("GameController");
-                GameObject go = instantiateGameObject("Prefab/Bomb");
-                go.transform.position = pos.transform.position;
+                x = Mathf.RoundToInt(pos.transform.position.x);
+                z = Mathf.RoundToInt(pos.transform.position.z);
+                Instantiate(bomb, new Vector3(x,bomb.transform.position.y,z),bomb.transform.rotation);
             }
         }
     }

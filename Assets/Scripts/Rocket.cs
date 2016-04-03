@@ -11,6 +11,7 @@ public class Rocket : MonoBehaviour {
     {
         rb = GetComponent<Rigidbody>();
         player = GameObject.Find("Player");
+        Invoke("RocketDestory",3f);
     }
     void Update()
     {
@@ -33,15 +34,8 @@ public class Rocket : MonoBehaviour {
             Destroy(gameObject);
         }
     }
-    public void RocketCreat()
+    public void RocketDestory()
     {
-
-        if (Input.GetKeyDown("r"))
-        {
-
-
-            //int RocketInvent = gameController.GetComponent<Rocket>().RocketInvent;
-            //dir = player.transform.forward;
-        }
+        Destroy(gameObject);
     }
 }
