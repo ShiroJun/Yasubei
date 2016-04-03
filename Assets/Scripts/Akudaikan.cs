@@ -20,11 +20,11 @@ public class Akudaikan : MonoBehaviour {
 
 
     }
-    void OnTriggerStay(Collider other)
+    void OnTriggerExit(Collider other)
     {
         anim.SetBool("Escape",true);
         Vector3 dir = this.transform.position - other.transform.position;
-        Vector3 pos = this.transform.position + dir * 1f;
+        Vector3 pos = this.transform.position + dir * 2.5f;
         agent.destination = pos;
     }
 }
