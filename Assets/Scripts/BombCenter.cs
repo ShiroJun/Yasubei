@@ -16,7 +16,7 @@ public class BombCenter : MonoBehaviour
         if (c.tag == "BombAfter")
         {
             gameObject.GetComponent<BoxCollider>().enabled = false;
-            Invoke("ColliderCheck", 3.8f);
+            Invoke("ColliderCheck", 2f);
         }
     }
 

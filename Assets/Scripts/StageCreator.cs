@@ -11,7 +11,7 @@ public class StageCreator : MonoBehaviour {
     // Use this for initialization
     void Start () {
         floors = GameObject.Find("Floors");
-        bombs = GameObject.Find("BombCenterTile");
+        bombs = GameObject.Find("BombCenterTiles");
         TileSet();
     }
 	
