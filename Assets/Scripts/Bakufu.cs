@@ -36,6 +36,10 @@ public class Bakufu : Bomb
 
                 gameController = GameObject.Find("GameController");
                 int pow = gameController.GetComponent<GameController>().ExPow;
+                if (pow >= 6)
+                {
+                    pow = 5;
+                }
                 GameObject[] bomb = gameController.GetComponent<BombCreator>().FirewrksMixs;
                 Instantiate(bomb[pow - 1], pos.transform.position, pos.transform.rotation);
 
