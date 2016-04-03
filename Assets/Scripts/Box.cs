@@ -3,19 +3,28 @@ using System.Collections;
 
 public class Box : MonoBehaviour
 {
+    bool flag = true;
     public GameObject taruRed;
-    void OnTriggerStay(Collider c)
+    void OnTriggerEnter(Collider c)
     {
         if (c.tag == "Bakufu")
         {
+            if (flag == true)
+            {
 
-            Destroy(c.gameObject);
-            Destroy(gameObject);
-            Transform pos = c.transform;
-            Instantiate(taruRed, pos.transform.position, pos.transform.rotation);
-            // go.transform.position = pos.transform.position;
-        }
-
-
+                Destroy(gameObject);
+                Instantiate(taruRed, transform.position, transform.rotation);
+                flag = false;
             }
+            else
+            {
+                Destroy(c.gameObject);
+            }
+        }
+     }
+    void TaruRed()
+    {
+
+
+    }
 }

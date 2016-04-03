@@ -13,6 +13,7 @@ TagManager:
   - BombAfter
   - Wall
   - Bomb
+  - Rocket
   layers:
   - Default
   - TransparentFX
