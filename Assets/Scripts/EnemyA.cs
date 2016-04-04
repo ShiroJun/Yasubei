@@ -15,4 +15,11 @@ public class EnemyA : MonoBehaviour {
     {
         agent.SetDestination(target.position);
     }
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Bakufu"))
+        {
+            Destroy(gameObject);
+        }
+    }
 }

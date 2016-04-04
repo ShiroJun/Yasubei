@@ -43,5 +43,11 @@ public class EnemyB : MonoBehaviour
         if (agent.remainingDistance < 0.5f)
             GotoNextPoint();
     }
-
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Bakufu"))
+        {
+            Destroy(gameObject);
+        }
+    }
 }
