@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 469300}
   - 33: {fileID: 3393300}
   - 23: {fileID: 2333988}
+  - 95: {fileID: 9547938}
   m_Layer: 0
   m_Name: Itembox_tabi
   m_TagString: Untagged
@@ -62,6 +63,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 126702}
   m_Mesh: {fileID: 4300000, guid: da9e6ef531d5f6b44b71f9e840bc46d9, type: 3}
+--- !u!95 &9547938
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 126702}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9454d129372d9904cba24bf528984776, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

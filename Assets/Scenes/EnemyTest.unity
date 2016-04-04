@@ -883,7 +883,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400620, guid: dcb4e01377e271947b0c5673a23bf97d, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11432540, guid: dcb4e01377e271947b0c5673a23bf97d, type: 2}
       propertyPath: x
@@ -2131,7 +2131,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!1001 &608225331
 Prefab:
   m_ObjectHideFlags: 0
@@ -2512,7 +2512,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 431820, guid: 009fb40a65979e04f92276c28500ca40, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 11418484, guid: 009fb40a65979e04f92276c28500ca40, type: 2}
       propertyPath: target
@@ -2740,7 +2740,7 @@ Transform:
   - {fileID: 1827915873}
   - {fileID: 130940076}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 13
 --- !u!1 &740231798
 GameObject:
   m_ObjectHideFlags: 0
@@ -3353,7 +3353,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 424592, guid: b4ad8f49c61bd1943af5870c64cdd599, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 13674098, guid: b4ad8f49c61bd1943af5870c64cdd599, type: 2}
       propertyPath: m_IsTrigger
@@ -3565,7 +3565,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 447492, guid: d34339d2673aea14e973bf7b769b5436, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 11430730, guid: d34339d2673aea14e973bf7b769b5436, type: 2}
       propertyPath: timerText
@@ -4187,7 +4187,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 431820, guid: 009fb40a65979e04f92276c28500ca40, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 11418484, guid: 009fb40a65979e04f92276c28500ca40, type: 2}
       propertyPath: target
@@ -5090,7 +5090,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22478018, guid: 77221ac5fd7d57a42a19a7c7e12c76ba, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 22478018, guid: 77221ac5fd7d57a42a19a7c7e12c76ba, type: 2}
       propertyPath: m_AnchoredPosition.x

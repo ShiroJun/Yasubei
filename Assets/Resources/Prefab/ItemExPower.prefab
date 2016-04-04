@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 407804}
   - 33: {fileID: 3339550}
   - 23: {fileID: 2389154}
+  - 95: {fileID: 9560322}
   m_Layer: 0
   m_Name: Itembox_hanabi
   m_TagString: Untagged
@@ -143,6 +144,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!95 &9560322
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 103524}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9454d129372d9904cba24bf528984776, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11439802
 MonoBehaviour:
   m_ObjectHideFlags: 1
