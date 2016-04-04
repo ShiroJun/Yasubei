@@ -29,23 +29,36 @@ public class YasubeiMovetest : MonoEX
 		if (notPass == true) {
 			if (Input.GetKey("up"))
 			{
-				transform.position += transform.forward * SPPOW;
-				anim.SetBool("Run",true);
-			}
+                transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+                transform.position += transform.forward * SPPOW;
+                anim.SetBool("Run", true);
+                //transform.position += transform.forward * SPPOW;
+                //anim.SetBool("Run",true);
+            }
 			else
 			{
 				anim.SetBool("Run", false);
 			}
 
-			if (Input.GetKey("right"))
+            if (Input.GetKey("right"))
 			{
-				transform.Rotate(0, 10, 0);
-			}
+                transform.rotation = Quaternion.Euler(new Vector3(0, 90, 0));
+                transform.position += transform.forward * SPPOW;
+                anim.SetBool("Run", true);
+            }
 			if (Input.GetKey("left"))
 			{
-				transform.Rotate(0, -10, 0);
-			}
-		}
+                transform.rotation = Quaternion.Euler(new Vector3(0, 270, 0));
+                transform.position += transform.forward * SPPOW;
+                anim.SetBool("Run", true);
+            }
+            if (Input.GetKey("down"))
+            {
+                transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
+                transform.position += transform.forward * SPPOW;
+                anim.SetBool("Run", true);
+            }
+        }
 	}
     void OnTriggerEnter(Collider hit)
     {
