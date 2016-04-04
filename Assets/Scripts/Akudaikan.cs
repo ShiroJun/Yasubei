@@ -37,7 +37,7 @@ public class Akudaikan : MonoBehaviour {
         }
         if (other.gameObject.CompareTag("Bakufu"))
         {
-            hp -= hp;
+            hp = hp-1;
         }
 
     }
