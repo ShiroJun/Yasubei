@@ -26,6 +26,8 @@ public class MessageGUI : MonoBehaviour {
 		mess2 ();
 		mess3 ();
 		mess4 ();
+		mess5 ();
+		Gooal ();
 		ItemMess();
 	}
 
@@ -114,6 +116,31 @@ public class MessageGUI : MonoBehaviour {
 		Invoke("OnMessage", 3f);
 	}
 
+	void mess5(){
+		player = GameObject.Find ("Player");
+		bool tri4 = player.GetComponent<ContactTrigger> ().Trigger03;
+		if (tri4 == true && intList[7] == 0) {
+			MessageText.text = "少し大きな通りが見えてきたぜ！";
+			MessageObject.SetActive (true);
+			intList[7] = 1;
+			CancelInvoke ("OnMessage");
+			Invoke("OnMessage", 3f);
+		}
+	}
+
+	void Gooal(){
+		player = GameObject.Find ("Player");
+		bool tri4 = player.GetComponent<ContactTrigger> ().GoalArea;
+		if (tri4 == true && intList[8] == 0) {
+			MessageText.text = "ゴール";
+			MessageObject.SetActive (true);
+			intList[8] = 1;
+			CancelInvoke ("OnMessage");
+			Invoke("OnMessage", 3f);
+		}
+	}
+
+
 	void ItemMess(){
 		player = GameObject.Find ("Player");
 		bool tri2 = player.GetComponent<ContactTrigger> ().ItemTrigger1;
@@ -124,6 +151,7 @@ public class MessageGUI : MonoBehaviour {
 			MessageObject.SetActive (true);
 			intList[3] = 1;
 			CancelInvoke ("OnMessage");
+			CancelInvoke ("messtext");
 			Invoke("OnMessage", 3f);
 		}
 		if (tri3 == true && intList[4] == 0) {
@@ -131,6 +159,7 @@ public class MessageGUI : MonoBehaviour {
 			MessageObject.SetActive (true);
 			intList[4] = 1;
 			CancelInvoke ("OnMessage");
+			CancelInvoke ("messtext");
 			Invoke("OnMessage", 3f);
 		}
 		if (tri4 == true && intList[5] == 0) {
@@ -138,6 +167,7 @@ public class MessageGUI : MonoBehaviour {
 			MessageObject.SetActive (true);
 			intList[5] = 1;
 			CancelInvoke ("OnMessage");
+			CancelInvoke ("messtext");
 			Invoke("OnMessage", 3f);
 		}
 	}

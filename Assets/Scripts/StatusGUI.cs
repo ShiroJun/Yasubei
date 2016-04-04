@@ -25,9 +25,26 @@ public class StatusGUI : MonoBehaviour {
 		int I1 = gameController.GetComponent<GameController> ().ExPow;
 		int I2 = gameController.GetComponent<GameController> ().SpPow;
 		int I3 = gameController.GetComponent<GameController> ().Invent; 
-		ExText.text = "Pow : " + I1.ToString();
-		SpText.text = "SP   : " + I2.ToString();
-		InvText.text = "Num : " + I3.ToString();
+
+		if (I1 <= 4) {
+			ExText.text = "Pow : " + I1.ToString ();
+		} else if (I1 == 5) {
+			ExText.text = "Pow : MAX";
+			Debug.Log (I1);
+		}
+
+		if (I2 <= 4) {
+			SpText.text = "SP   : " + I2.ToString();
+		} else if (I2 == 5) {
+			SpText.text = "SP   : MAX";
+		}
+
+		if (I3 <= 4) {
+			InvText.text = "Num : " + I3.ToString();
+		} else if (I3 == 5) {
+			InvText.text = "Num : MAX";
+		}
+
 	}
 
 	void CountDown(){

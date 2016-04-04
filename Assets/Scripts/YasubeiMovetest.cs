@@ -5,8 +5,10 @@ public class YasubeiMovetest : MonoEX
 {
     public float speed;
     GameObject gameController;
-    private float SPPOW;
+	private float SPPOW;
+	public bool notPass;
     private Animator anim;
+
     void Start()
     {
         Invoke("Destroy", 100);
@@ -17,51 +19,67 @@ public class YasubeiMovetest : MonoEX
     void Update()
     {
         gameController = GameObject.Find("GameController");
-        SPPOW = speed * gameController.GetComponent<GameController>().SpPow;
+		SPPOW = speed + (gameController.GetComponent<GameController>().SpPow * 0.01f);
     }
     void FixedUpdate()
     {
-        if (Input.GetKey("up"))
-        {
-            transform.position += transform.forward * SPPOW;
-            anim.SetBool("Run",true);
-        }
-        else
-        {
-            anim.SetBool("Run", false);
-        }
-        
-        if (Input.GetKey("right"))
-        {
-            transform.Rotate(0, 10, 0);
-        }
-        if (Input.GetKey("left"))
-        {
-            transform.Rotate(0, -10, 0);
-        }
+		PlayerControl ();
     }
+	void PlayerControl(){
+		if (notPass == true) {
+			if (Input.GetKey("up"))
+			{
+				transform.position += transform.forward * SPPOW;
+				anim.SetBool("Run",true);
+			}
+			else
+			{
+				anim.SetBool("Run", false);
+			}
+
+			if (Input.GetKey("right"))
+			{
+				transform.Rotate(0, 10, 0);
+			}
+			if (Input.GetKey("left"))
+			{
+				transform.Rotate(0, -10, 0);
+			}
+		}
+	}
     void OnTriggerEnter(Collider hit)
     {
         if (hit.CompareTag("Item"))
         {
             if (hit.name.IndexOf("ExPow") != -1)
             {
-                gameController = GameObject.Find("GameController");
-                gameController.GetComponent<GameController>().ExPow += 1;
-                Debug.Log("EX" + gameController.GetComponent<GameController>().ExPow);
+				if(gameController.GetComponent<GameController>().ExPow < 5){
+					gameController = GameObject.Find("GameController");
+					gameController.GetComponent<GameController>().ExPow += 1;
+				}
             }
             else if (hit.name.IndexOf("SpPow") != -1)
             {
-                gameController = GameObject.Find("GameController");
-                gameController.GetComponent<GameController>().SpPow += 1;
-                Debug.Log("SP" + gameController.GetComponent<GameController>().SpPow);
+				if (gameController.GetComponent<GameController> ().SpPow < 5) {
+					gameController = GameObject.Find("GameController");
+					gameController.GetComponent<GameController>().SpPow += 1;
+				}
             }
             else if (hit.name.IndexOf("Invent") != -1)
             {
-                gameController = GameObject.Find("GameController");
-                gameController.GetComponent<GameController>().Invent += 1;
-                Debug.Log("In" + gameController.GetComponent<GameController>().Invent);
+				if (gameController.GetComponent<GameController> ().Invent < 5) {
+					gameController = GameObject.Find("GameController");
+					gameController.GetComponent<GameController>().Invent += 1;
+				}
             }
         }
+		else if(hit.CompareTag("NotPass")){
+			notPass = false;
+		}
     }
+	void OnTriggerExit(Collider hit) {
+		if (hit.CompareTag ("NotPass")){
+			notPass = true;
+		}
+	}
 }

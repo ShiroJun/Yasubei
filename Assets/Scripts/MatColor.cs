@@ -5,6 +5,9 @@ public class MatColor : MonoBehaviour {
 
 	private float ti = 0f;
 	private bool nan = false;
+	public float R;
+	public float B;
+	public float G;
 	void Start () {
 	
 	}
@@ -12,7 +15,7 @@ public class MatColor : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		ColorTime ();
-		GetComponent<Renderer>().sharedMaterial.color = new Color(0.0f, 0.8f, 0.5f, ti);
+		GetComponent<Renderer>().sharedMaterial.color = new Color(R, B, G, ti);
 	}
 
 
