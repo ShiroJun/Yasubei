@@ -5,6 +5,8 @@ public class PlayerMove : MonoEX {
     public float speed;
 	GameObject gameController;
 	private float SPPOW;
+	private Vector3		move = Vector3.zero;	// キャラ移動量.
+	private float		rotationSpeed = 180.0f;	// プレイヤーの回転速度
     void Start()
     {
         Invoke("Destroy", 100);
@@ -16,12 +18,22 @@ public class PlayerMove : MonoEX {
 		SPPOW = speed *gameController.GetComponent<GameController> ().SpPow;
 	}
     void FixedUpdate () {
-
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
-		transform.Translate(x * SPPOW, 0, z * SPPOW);
 
+
+
+		float y = move.y;
+		move = new Vector3(x , 0.0f , z);		// 左右上下のキー入力を取得し、移動量に代入.
+		Vector3 playerDir = move;	// 移動方向を取得.
+		Debug.Log(playerDir);
+		// ▼▼▼プレイヤーの向き変更▼▼▼
+		if(playerDir.magnitude > 0.1f){
+			Quaternion q = Quaternion.LookRotation(playerDir);			// 向きたい方角をQuaternionn型に直す .
+			transform.rotation = Quaternion.RotateTowards(transform.rotation , q , rotationSpeed * Time.deltaTime);	// 向きを q に向けてじわ～っと変化させる.
+		}
+		transform.Translate(x * SPPOW, 0, z * SPPOW);
 
         //if (Input.GetKey(KeyCode.LeftArrow))
         //{
