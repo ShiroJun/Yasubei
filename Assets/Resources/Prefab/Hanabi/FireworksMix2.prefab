@@ -33,7 +33,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &120026
 GameObject:
   m_ObjectHideFlags: 0
@@ -44,6 +44,7 @@ GameObject:
   - 4: {fileID: 444932}
   - 65: {fileID: 6596574}
   - 114: {fileID: 11496204}
+  - 114: {fileID: 11423294}
   m_Layer: 0
   m_Name: FireworksMix (4)
   m_TagString: Bakufu
@@ -61,6 +62,7 @@ GameObject:
   - 4: {fileID: 447642}
   - 65: {fileID: 6596376}
   - 114: {fileID: 11489994}
+  - 114: {fileID: 11439336}
   m_Layer: 0
   m_Name: FireworksMix (2)
   m_TagString: Bakufu
@@ -101,7 +103,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &133194
 GameObject:
   m_ObjectHideFlags: 1
@@ -146,6 +148,7 @@ GameObject:
   - 4: {fileID: 444382}
   - 65: {fileID: 6588734}
   - 114: {fileID: 11430710}
+  - 114: {fileID: 11433108}
   m_Layer: 0
   m_Name: FireworksMix (3)
   m_TagString: Bakufu
@@ -203,7 +206,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &161704
 GameObject:
   m_ObjectHideFlags: 1
@@ -231,6 +234,7 @@ GameObject:
   - 4: {fileID: 444144}
   - 65: {fileID: 6557498}
   - 114: {fileID: 11454040}
+  - 114: {fileID: 11469716}
   m_Layer: 0
   m_Name: FireworksMix (1)
   m_TagString: Bakufu
@@ -254,7 +258,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &177438
 GameObject:
   m_ObjectHideFlags: 1
@@ -833,6 +837,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fd6d4bf240253f40bcf8a726e3afd52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11423294
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 120026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa59a69a8ca2f04b9c43cc844a47324, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11430710
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -855,6 +870,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fd6d4bf240253f40bcf8a726e3afd52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11433108
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa59a69a8ca2f04b9c43cc844a47324, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11439336
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 123120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa59a69a8ca2f04b9c43cc844a47324, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11450528
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -875,6 +912,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6fd6d4bf240253f40bcf8a726e3afd52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11469716
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 164532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa59a69a8ca2f04b9c43cc844a47324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &11489994
