@@ -44,10 +44,10 @@ public class ContactTrigger : MonoBehaviour {
 			else if (hit.name.IndexOf ("Invent") != -1) {
 				ItemTrigger3 = true;
 			}
+			else if (hit.name.IndexOf ("Tegata") != -1) {
+				GoalArea = true;
+			}
+		}
 
-		}
-		else if (hit.name.IndexOf ("GoalArea") != -1) {
-			GoalArea = true;
-		}
 	}
 }

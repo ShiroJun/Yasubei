@@ -7,7 +7,6 @@ public class FollowPlayer : MonoBehaviour
 	public float right;
 	public float up;
 	public float down;
-	public float height;
 	public float angle;
 	public Transform target;    // ターゲットへの参照
 
@@ -17,19 +16,40 @@ public class FollowPlayer : MonoBehaviour
 
 	void Update ()
 	{
+		transform.position = new Vector3(target.position.x, 10,target.position.z -angle);
 
-		transform.position = new Vector3(target.position.x, height,target.position.z - angle);
 		if(transform.position.x < left){
-			transform.position = new Vector3(left, height, target.position.z);
+			if (transform.position.x < left && transform.position.z >= up) {
+				transform.position = new Vector3(left, 10, up-0.01f);
+				Debug.Log ("tes");
+			}
+			else if (transform.position.x < left && transform.position.z < down) {
+				transform.position = new Vector3 (left, 10, down);
+			} 
+			else {
+				transform.position = new Vector3(left, 10, target.position.z -angle);
+			}
+
 		}
+
 		if(transform.position.x >= right){
-			transform.position = new Vector3(right, height, target.position.z);
+			if(transform.position.x >= right && transform.position.z >= up){
+				transform.position = new Vector3(right, 10, up-0.01f);
+
+			}
+			else if (transform.position.x >= right && transform.position.z < down) {
+				transform.position = new Vector3 (right, 10, down);
+			} 
+			else {
+				transform.position = new Vector3(right, 10, target.position.z -angle);
+			}
+
 		}
-		if(transform.position.z >= up){
-			transform.position = new Vector3(target.position.x, height, up);
+		else if(transform.position.z >= up){
+			transform.position = new Vector3(target.position.x, 10, up);
 		}
-		if(transform.position.z < down){
-			transform.position = new Vector3(target.position.x, height, down);
+		else if(transform.position.z < down){
+			transform.position = new Vector3(target.position.x, 10, down);
 		}
 
 

@@ -8,6 +8,10 @@ public class MessageGUI : MonoBehaviour {
 	public Text MessageText;		//テキストの中身を変える
 	public GameObject MessageObject;//メッセージのオンオフ
 
+	public Text HiTimeText;
+	public Text ClearTimeText;		//テキストの中身を変える
+	public GameObject ResultObject;//メッセージのオンオフ
+
 	private List<int> intList = new List<int>();    //int型のリスト
 
 
@@ -27,6 +31,7 @@ public class MessageGUI : MonoBehaviour {
 		mess3 ();
 		mess4 ();
 		mess5 ();
+		mess6 ();
 		Gooal ();
 		ItemMess();
 	}
@@ -120,9 +125,28 @@ public class MessageGUI : MonoBehaviour {
 		player = GameObject.Find ("Player");
 		bool tri4 = player.GetComponent<ContactTrigger> ().Trigger03;
 		if (tri4 == true && intList[7] == 0) {
-			MessageText.text = "少し大きな通りが見えてきたぜ！";
+			MessageText.text = "手形が落ちてるぜ！";
 			MessageObject.SetActive (true);
 			intList[7] = 1;
+			CancelInvoke ("OnMessage");
+			Invoke("messtext5", 3f);
+			Invoke("OnMessage", 3f);
+		}
+	}
+
+	public void messtext5(){
+		MessageText.text = "取ると次に行けるんだぜ！";
+		MessageObject.SetActive (true);
+		CancelInvoke ("OnMessage");
+		Invoke("OnMessage", 3f);
+	}
+		
+	void mess6(){
+		int count = GameObject.FindGameObjectsWithTag ("Enemy").Length;
+		if(count == 0 && intList[9] == 0){
+			MessageText.text = "ぶっとばしたぜ！";
+			MessageObject.SetActive (true);
+			intList[9] = 1;
 			CancelInvoke ("OnMessage");
 			Invoke("OnMessage", 3f);
 		}
@@ -132,14 +156,18 @@ public class MessageGUI : MonoBehaviour {
 		player = GameObject.Find ("Player");
 		bool tri4 = player.GetComponent<ContactTrigger> ().GoalArea;
 		if (tri4 == true && intList[8] == 0) {
-			MessageText.text = "ゴール";
+			MessageText.text = "おみっちゃん待っててくれ！";
 			MessageObject.SetActive (true);
 			intList[8] = 1;
 			CancelInvoke ("OnMessage");
+			CancelInvoke ("messtext5");
 			Invoke("OnMessage", 3f);
+			Invoke("OnClear", 3f);
 		}
 	}
-
+	void OnClear(){
+		ResultObject.SetActive (true);
+	}
 
 	void ItemMess(){
 		player = GameObject.Find ("Player");
