@@ -131,7 +131,7 @@ GameObject:
   - 33: {fileID: 3389774}
   - 135: {fileID: 13530374}
   - 23: {fileID: 2383380}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Sphere
   m_TagString: Range
   m_Icon: {fileID: 0}
@@ -497,6 +497,7 @@ GameObject:
   - 114: {fileID: 11418468}
   - 114: {fileID: 11416314}
   - 114: {fileID: 11414400}
+  - 114: {fileID: 11468760}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1490,6 +1491,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.05
   notPass: 1
+--- !u!114 &11468760
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 165532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 092d89f3f1ca4824ba8db271cb3f99d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rocket: {fileID: 182786, guid: 30342a83e2298084890ec7826f479517, type: 2}
 --- !u!135 &13530374
 SphereCollider:
   m_ObjectHideFlags: 1
