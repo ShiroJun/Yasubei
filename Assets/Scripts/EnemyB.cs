@@ -6,12 +6,12 @@ public class EnemyB : MonoBehaviour
     public Transform[] points;
     private int destPoint = 0;
     private NavMeshAgent agent;
-
+    private Animator anim;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-
+        anim = GetComponent<Animator>();
         // Disabling auto-braking allows for continuous movement
         // between points (ie, the agent doesn't slow down as it
         // approaches a destination point).
@@ -43,5 +43,15 @@ public class EnemyB : MonoBehaviour
         if (agent.remainingDistance < 0.5f)
             GotoNextPoint();
     }
-
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Bakufu"))
+        {
+            Destroy(gameObject);
+        }
+        if (other.gameObject.CompareTag("Player"))
+        {
+            anim.SetTrigger("attack");
+        }
+    }
 }

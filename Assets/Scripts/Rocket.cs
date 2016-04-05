@@ -25,12 +25,12 @@ public class Rocket : MonoBehaviour {
         }
         if (c.tag == "Box")
         {
-            Instantiate(roketFireWoks,transform.position,gameObject.transform.rotation);
+            Instantiate(roketFireWoks,c.transform.position,gameObject.transform.rotation);
             Destroy(gameObject);
         }
         if (c.tag == "Wall")
         {
-            Instantiate(roketFireWoks, gameObject.transform.position, gameObject.transform.rotation);
+            Instantiate(roketFireWoks, c.transform.position, gameObject.transform.rotation);
             Destroy(gameObject);
         }
     }

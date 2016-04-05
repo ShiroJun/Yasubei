@@ -27,13 +27,14 @@ GameObject:
   - 4: {fileID: 430266}
   - 65: {fileID: 6513364}
   - 114: {fileID: 11478026}
+  - 114: {fileID: 11436866}
   m_Layer: 0
   m_Name: FireworksMix (6)
   m_TagString: Bakufu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &110422
 GameObject:
   m_ObjectHideFlags: 1
@@ -95,13 +96,14 @@ GameObject:
   - 4: {fileID: 442218}
   - 65: {fileID: 6532498}
   - 114: {fileID: 11448332}
+  - 114: {fileID: 11454778}
   m_Layer: 0
   m_Name: FireworksMix (5)
   m_TagString: Bakufu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &116342
 GameObject:
   m_ObjectHideFlags: 1
@@ -112,13 +114,14 @@ GameObject:
   - 4: {fileID: 491662}
   - 65: {fileID: 6597332}
   - 114: {fileID: 11404740}
+  - 114: {fileID: 11477230}
   m_Layer: 0
   m_Name: FireworksMix (7)
   m_TagString: Bakufu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &118820
 GameObject:
   m_ObjectHideFlags: 1
@@ -129,13 +132,14 @@ GameObject:
   - 4: {fileID: 466768}
   - 65: {fileID: 6543222}
   - 114: {fileID: 11499072}
+  - 114: {fileID: 11491628}
   m_Layer: 0
   m_Name: FireworksMix (6)
   m_TagString: Bakufu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &122666
 GameObject:
   m_ObjectHideFlags: 0
@@ -146,6 +150,7 @@ GameObject:
   - 4: {fileID: 471230}
   - 65: {fileID: 6582344}
   - 114: {fileID: 11405810}
+  - 114: {fileID: 11428998}
   m_Layer: 0
   m_Name: FireworksMix (4)
   m_TagString: Bakufu
@@ -169,7 +174,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &124340
 GameObject:
   m_ObjectHideFlags: 1
@@ -180,13 +185,14 @@ GameObject:
   - 4: {fileID: 480774}
   - 65: {fileID: 6529984}
   - 114: {fileID: 11404966}
+  - 114: {fileID: 11460192}
   m_Layer: 0
   m_Name: FireworksMix (7)
   m_TagString: Bakufu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &124422
 GameObject:
   m_ObjectHideFlags: 1
@@ -197,13 +203,14 @@ GameObject:
   - 4: {fileID: 470304}
   - 65: {fileID: 6513096}
   - 114: {fileID: 11441566}
+  - 114: {fileID: 11424686}
   m_Layer: 0
   m_Name: FireworksMix (5)
   m_TagString: Bakufu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &125154
 GameObject:
   m_ObjectHideFlags: 1
@@ -316,13 +323,14 @@ GameObject:
   - 4: {fileID: 483618}
   - 65: {fileID: 6535994}
   - 114: {fileID: 11426460}
+  - 114: {fileID: 11447964}
   m_Layer: 0
   m_Name: FireworksMix (6)
   m_TagString: Bakufu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &145980
 GameObject:
   m_ObjectHideFlags: 0
@@ -333,6 +341,7 @@ GameObject:
   - 4: {fileID: 450628}
   - 65: {fileID: 6509652}
   - 114: {fileID: 11478480}
+  - 114: {fileID: 11428976}
   m_Layer: 0
   m_Name: FireworksMix (3)
   m_TagString: Bakufu
@@ -384,13 +393,14 @@ GameObject:
   - 4: {fileID: 405956}
   - 65: {fileID: 6524468}
   - 114: {fileID: 11423820}
+  - 114: {fileID: 11464128}
   m_Layer: 0
   m_Name: FireworksMix (5)
   m_TagString: Bakufu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &152804
 GameObject:
   m_ObjectHideFlags: 1
@@ -424,7 +434,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &156054
 GameObject:
   m_ObjectHideFlags: 1
@@ -435,13 +445,14 @@ GameObject:
   - 4: {fileID: 476062}
   - 65: {fileID: 6551604}
   - 114: {fileID: 11405290}
+  - 114: {fileID: 11414408}
   m_Layer: 0
   m_Name: FireworksMix (7)
   m_TagString: Bakufu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &159688
 GameObject:
   m_ObjectHideFlags: 1
@@ -475,7 +486,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &162146
 GameObject:
   m_ObjectHideFlags: 1
@@ -503,13 +514,14 @@ GameObject:
   - 4: {fileID: 432368}
   - 65: {fileID: 6504938}
   - 114: {fileID: 11424934}
+  - 114: {fileID: 11450064}
   m_Layer: 0
   m_Name: FireworksMix (7)
   m_TagString: Bakufu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &165386
 GameObject:
   m_ObjectHideFlags: 1
@@ -571,13 +583,14 @@ GameObject:
   - 4: {fileID: 473760}
   - 65: {fileID: 6556058}
   - 114: {fileID: 11423984}
+  - 114: {fileID: 11403686}
   m_Layer: 0
   m_Name: FireworksMix (6)
   m_TagString: Bakufu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &175078
 GameObject:
   m_ObjectHideFlags: 1
@@ -588,13 +601,14 @@ GameObject:
   - 4: {fileID: 417158}
   - 65: {fileID: 6524100}
   - 114: {fileID: 11478028}
+  - 114: {fileID: 11408764}
   m_Layer: 0
   m_Name: FireworksMix (5)
   m_TagString: Bakufu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &176400
 GameObject:
   m_ObjectHideFlags: 1
@@ -622,6 +636,7 @@ GameObject:
   - 4: {fileID: 448764}
   - 65: {fileID: 6546070}
   - 114: {fileID: 11455790}
+  - 114: {fileID: 11470404}
   m_Layer: 0
   m_Name: FireworksMix (1)
   m_TagString: Bakufu
@@ -673,6 +688,7 @@ GameObject:
   - 4: {fileID: 496566}
   - 65: {fileID: 6591236}
   - 114: {fileID: 11494096}
+  - 114: {fileID: 11489370}
   m_Layer: 0
   m_Name: FireworksMix (2)
   m_TagString: Bakufu
@@ -696,7 +712,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &193994
 GameObject:
   m_ObjectHideFlags: 1
@@ -1868,6 +1884,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11403686
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 174464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa59a69a8ca2f04b9c43cc844a47324, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11404740
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1910,6 +1937,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6fd6d4bf240253f40bcf8a726e3afd52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11408764
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 175078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa59a69a8ca2f04b9c43cc844a47324, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11414408
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 156054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa59a69a8ca2f04b9c43cc844a47324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &11416138
@@ -1956,6 +2005,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fd6d4bf240253f40bcf8a726e3afd52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11424686
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 124422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa59a69a8ca2f04b9c43cc844a47324, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11424934
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1978,6 +2038,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fd6d4bf240253f40bcf8a726e3afd52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11428976
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 145980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa59a69a8ca2f04b9c43cc844a47324, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11428998
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 122666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa59a69a8ca2f04b9c43cc844a47324, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11436866
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 105802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa59a69a8ca2f04b9c43cc844a47324, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11441566
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1987,6 +2080,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6fd6d4bf240253f40bcf8a726e3afd52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11447964
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 145926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa59a69a8ca2f04b9c43cc844a47324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &11448332
@@ -2000,6 +2104,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fd6d4bf240253f40bcf8a726e3afd52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11450064
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 165038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa59a69a8ca2f04b9c43cc844a47324, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11454778
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 112674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa59a69a8ca2f04b9c43cc844a47324, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11455790
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2009,6 +2135,50 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6fd6d4bf240253f40bcf8a726e3afd52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11460192
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 124340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa59a69a8ca2f04b9c43cc844a47324, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11464128
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 150572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa59a69a8ca2f04b9c43cc844a47324, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11470404
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 179386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa59a69a8ca2f04b9c43cc844a47324, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11477230
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 116342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa59a69a8ca2f04b9c43cc844a47324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &11478026
@@ -2055,6 +2225,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fd6d4bf240253f40bcf8a726e3afd52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11489370
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 189228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa59a69a8ca2f04b9c43cc844a47324, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11490304
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2064,6 +2245,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6fd6d4bf240253f40bcf8a726e3afd52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11491628
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 118820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa59a69a8ca2f04b9c43cc844a47324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &11492980

@@ -11,7 +11,6 @@ public class Box : MonoBehaviour
         {
             if (flag == true)
             {
-
                 Destroy(gameObject);
                 Instantiate(taruRed, transform.position, transform.rotation);
                 flag = false;

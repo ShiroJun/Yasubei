@@ -6,9 +6,11 @@ public class ContactTrigger : MonoBehaviour {
 	public bool Trigger00 = false;
 	public bool Trigger01  = false;
 	public bool Trigger02  = false;
+	public bool Trigger03  = false;
 	public bool ItemTrigger1 = false;
 	public bool ItemTrigger2 = false;
 	public bool ItemTrigger3 = false;
+	public bool GoalArea = false;
 	void Start () {
 	
 	}
@@ -29,6 +31,9 @@ public class ContactTrigger : MonoBehaviour {
 		else if (hit.name.IndexOf ("Trigger02") != -1) {
 			Trigger02 = true;
 		}
+		else if (hit.name.IndexOf ("Trigger03") != -1) {
+			Trigger03 = true;
+		}
 		else if (hit.CompareTag ("Item")) {
 			if (hit.name.IndexOf ("ExPow") != -1) {
 				ItemTrigger1 = true;
@@ -40,6 +45,9 @@ public class ContactTrigger : MonoBehaviour {
 				ItemTrigger3 = true;
 			}
 
+		}
+		else if (hit.name.IndexOf ("GoalArea") != -1) {
+			GoalArea = true;
 		}
 	}
 }
