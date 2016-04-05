@@ -7,6 +7,7 @@ public class FollowPlayer : MonoBehaviour
 	public float right;
 	public float up;
 	public float down;
+	public float height;
 	public Transform target;    // ターゲットへの参照
 
 	void Start ()
@@ -16,19 +17,19 @@ public class FollowPlayer : MonoBehaviour
 	void Update ()
 	{
 
-		transform.position = new Vector3(target.position.x, 10,target.position.z);
+		transform.position = new Vector3(target.position.x, height,target.position.z);
 		if(transform.position.x < left){
-			transform.position = new Vector3(left, 10, target.position.z);
+			transform.position = new Vector3(left, height, target.position.z);
 		}
 
 		if(transform.position.x >= right){
-			transform.position = new Vector3(right, 10, target.position.z);
+			transform.position = new Vector3(right, height, target.position.z);
 		}
 		if(transform.position.x < up){
-			transform.position = new Vector3(target.position.x, 10, up);
+			transform.position = new Vector3(target.position.x, height, up);
 		}
 		if(transform.position.z >= down){
-			transform.position = new Vector3(target.position.x, 10, down);
+			transform.position = new Vector3(target.position.x, height, down);
 		}
 
 
