@@ -26,25 +26,63 @@ public class StatusGUI : MonoBehaviour {
 		int I2 = gameController.GetComponent<GameController> ().SpPow;
 		int I3 = gameController.GetComponent<GameController> ().Invent; 
 
-		if (I1 <= 4) {
-			ExText.text = I1.ToString ();
-		} else if (I1 == 5) {
-			ExText.text = "MAX";
-			Debug.Log (I1);
+		switch (I1){
+		case 1:
+			ExText.text = "壱";
+			break;
+		case 2:
+			ExText.text = "弐";
+			break;
+		case 3:
+			ExText.text = "参";
+			break;
+		case 4:
+			ExText.text = "四";
+			break;
+		case 5:
+			ExText.text = "最大";
+			break;
+		default:;
+			break;
 		}
-
-		if (I2 <= 4) {
-			SpText.text = I2.ToString();
-		} else if (I2 == 5) {
-			SpText.text = "MAX";
+		switch (I2){
+		case 1:
+			SpText.text = "壱";
+			break;
+		case 2:
+			SpText.text = "弐";
+			break;
+		case 3:
+			SpText.text = "参";
+			break;
+		case 4:
+			SpText.text = "四";
+			break;
+		case 5:
+			SpText.text = "最大";
+			break;
+		default:;
+			break;
 		}
-
-		if (I3 <= 4) {
-			InvText.text = I3.ToString();
-		} else if (I3 == 5) {
-			InvText.text = "MAX";
+		switch (I3){
+		case 1:
+			InvText.text = "壱";
+			break;
+		case 2:
+			InvText.text = "弐";
+			break;
+		case 3:
+			InvText.text = "参";
+			break;
+		case 4:
+			InvText.text = "四";
+			break;
+		case 5:
+			InvText.text = "最大";
+			break;
+		default:;
+			break;
 		}
-
 	}
 
 	void CountDown(){

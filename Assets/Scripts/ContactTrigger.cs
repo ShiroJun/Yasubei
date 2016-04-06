@@ -35,18 +35,21 @@ public class ContactTrigger : MonoBehaviour {
 			Trigger03 = true;
 		}
 		else if (hit.CompareTag ("Item")) {
-			if (hit.name.IndexOf ("ExPow") != -1) {
-				ItemTrigger1 = true;
+			if (Application.loadedLevelName == "Stage1") {
+				if (hit.name.IndexOf ("ExPow") != -1) {
+					ItemTrigger1 = true;
+				}
+				else if (hit.name.IndexOf ("SpPow") != -1) {
+					ItemTrigger2 = true;
+				}
+				else if (hit.name.IndexOf ("Invent") != -1) {
+					ItemTrigger3 = true;
+				}
+				else if (hit.name.IndexOf ("Tegata") != -1) {
+					GoalArea = true;
+				}
 			}
-			else if (hit.name.IndexOf ("SpPow") != -1) {
-				ItemTrigger2 = true;
-			}
-			else if (hit.name.IndexOf ("Invent") != -1) {
-				ItemTrigger3 = true;
-			}
-			else if (hit.name.IndexOf ("Tegata") != -1) {
-				GoalArea = true;
-			}
+
 		}
 
 	}
