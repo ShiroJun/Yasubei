@@ -3,6 +3,7 @@ using System.Collections;
 
 public class ContactTrigger : MonoBehaviour {
 
+	private Animator anim;
 	public bool Trigger00 = false;
 	public bool Trigger01  = false;
 	public bool Trigger02  = false;
@@ -12,7 +13,7 @@ public class ContactTrigger : MonoBehaviour {
 	public bool ItemTrigger3 = false;
 	public bool GoalArea = false;
 	void Start () {
-	
+		anim = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -47,6 +48,7 @@ public class ContactTrigger : MonoBehaviour {
 				}
 				else if (hit.name.IndexOf ("Tegata") != -1) {
 					GoalArea = true;
+					anim.SetBool("Victory", true);
 				}
 			}
 
