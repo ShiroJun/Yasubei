@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityStandardAssets.CrossPlatformInput; // CrossPlatformInputManager を含む名前空間 CrossPlatforminputManager.csからもってきた
 
 public class YasubeiMovetest : MonoEX
 {
@@ -24,8 +25,47 @@ public class YasubeiMovetest : MonoEX
     void FixedUpdate()
     {
 		PlayerControl ();
+		PlayerControl2 ();
     }
 	void PlayerControl(){
+		float h = CrossPlatformInputManager.GetAxisRaw ("Horizontal");
+		float v = CrossPlatformInputManager.GetAxisRaw("Vertical");
+		Debug.Log(h);
+		if (notPass == true) {
+			if (v > 0.4f)
+			{
+				transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+				transform.position += transform.forward * SPPOW;
+				anim.SetBool("Run", true);
+				//transform.position += transform.forward * SPPOW;
+				//anim.SetBool("Run",true);
+			}
+			else
+			{
+				anim.SetBool("Run", false);
+			}
+
+			if (h > 0.4f)
+			{
+				transform.rotation = Quaternion.Euler(new Vector3(0, 90, 0));
+				transform.position += transform.forward * SPPOW;
+				anim.SetBool("Run", true);
+			}
+			if (h < -0.4f)
+			{
+				transform.rotation = Quaternion.Euler(new Vector3(0, 270, 0));
+				transform.position += transform.forward * SPPOW;
+				anim.SetBool("Run", true);
+			}
+			if (v < -0.4f)
+			{
+				transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
+				transform.position += transform.forward * SPPOW;
+				anim.SetBool("Run", true);
+			}
+		}
+	}
+	void PlayerControl2(){
 		if (notPass == true) {
 			if (Input.GetKey("up"))
 			{

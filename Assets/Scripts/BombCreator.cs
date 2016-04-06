@@ -38,4 +38,22 @@ public class BombCreator : MonoEX
             }
         }
     }
+	public void BombCreat2()
+	{
+			gameController = GameObject.Find("GameController");
+			int Invent = gameController.GetComponent<GameController>().Invent;
+			bombObjects = GameObject.FindGameObjectsWithTag("BombAfter");
+			bombCount = bombObjects.Length;
+
+
+			if (bombCount < Invent)
+			{
+
+				GameObject.Find("GameController");
+				x = Mathf.RoundToInt(pos.transform.position.x);
+				z = Mathf.RoundToInt(pos.transform.position.z);
+				Instantiate(bomb, new Vector3(x,bomb.transform.position.y,z),bomb.transform.rotation);
+			}
+
+	}
 }
