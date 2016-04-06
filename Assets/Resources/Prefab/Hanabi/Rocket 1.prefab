@@ -105,6 +105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   roketFireWoks: {fileID: 105066, guid: 698645037abae5a46bd386f40e5324c7, type: 2}
+  roketFireWoksWall: {fileID: 103506, guid: ba1f3b9eed4db5546aecf6dc120bcb53, type: 2}
 --- !u!136 &13678848
 CapsuleCollider:
   m_ObjectHideFlags: 1

@@ -62,6 +62,14 @@ public class YasubeiMovetest : MonoEX
 	}
     void OnTriggerEnter(Collider hit)
     {
+        if (hit.tag == "Enemy")
+        {
+            Application.LoadLevel(Application.loadedLevel);
+        }
+
+
+
+
         if (hit.CompareTag("Item"))
         {
             if (hit.name.IndexOf("ExPow") != -1)

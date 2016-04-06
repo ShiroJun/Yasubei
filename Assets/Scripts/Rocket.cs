@@ -6,6 +6,7 @@ public class Rocket : MonoBehaviour {
     Rigidbody rb;
     public float speed;
     public GameObject roketFireWoks;
+    public GameObject roketFireWoksWall;
 
     void Start()
     {
@@ -30,7 +31,7 @@ public class Rocket : MonoBehaviour {
         }
         if (c.tag == "Wall")
         {
-            Instantiate(roketFireWoks, c.transform.position, gameObject.transform.rotation);
+            Instantiate(roketFireWoksWall, transform.position, gameObject.transform.rotation);
             Destroy(gameObject);
         }
     }
