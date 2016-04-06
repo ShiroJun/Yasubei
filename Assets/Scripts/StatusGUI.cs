@@ -3,21 +3,20 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class StatusGUI : MonoBehaviour {
-	
+
+
 	GameObject gameController;
-	public float timer;
-	public Text timerText;
 	public Text ExText;
 	public Text SpText;
 	public Text InvText;
 
 	void Start () {
-	
+		
 	}
 	
 	void Update() {
-		CountDown ();
 		ItemPow ();
+
 	}
 
 	void ItemPow(){
@@ -26,31 +25,62 @@ public class StatusGUI : MonoBehaviour {
 		int I2 = gameController.GetComponent<GameController> ().SpPow;
 		int I3 = gameController.GetComponent<GameController> ().Invent; 
 
-		if (I1 <= 4) {
-			ExText.text = "Pow : " + I1.ToString ();
-		} else if (I1 == 5) {
-			ExText.text = "Pow : MAX";
-			Debug.Log (I1);
+		switch (I1){
+		case 1:
+			ExText.text = "壱";
+			break;
+		case 2:
+			ExText.text = "弐";
+			break;
+		case 3:
+			ExText.text = "参";
+			break;
+		case 4:
+			ExText.text = "四";
+			break;
+		case 5:
+			ExText.text = "最大";
+			break;
+		default:;
+			break;
 		}
-
-		if (I2 <= 4) {
-			SpText.text = "SP   : " + I2.ToString();
-		} else if (I2 == 5) {
-			SpText.text = "SP   : MAX";
+		switch (I2){
+		case 1:
+			SpText.text = "壱";
+			break;
+		case 2:
+			SpText.text = "弐";
+			break;
+		case 3:
+			SpText.text = "参";
+			break;
+		case 4:
+			SpText.text = "四";
+			break;
+		case 5:
+			SpText.text = "最大";
+			break;
+		default:;
+			break;
 		}
-
-		if (I3 <= 4) {
-			InvText.text = "Num : " + I3.ToString();
-		} else if (I3 == 5) {
-			InvText.text = "Num : MAX";
-		}
-
-	}
-
-	void CountDown(){
-		if (timer > 0) {
-			timer -= 1f * Time.deltaTime;
-			timerText.text = "残り時間 : " + ((int)timer).ToString ();
+		switch (I3){
+		case 1:
+			InvText.text = "壱";
+			break;
+		case 2:
+			InvText.text = "弐";
+			break;
+		case 3:
+			InvText.text = "参";
+			break;
+		case 4:
+			InvText.text = "四";
+			break;
+		case 5:
+			InvText.text = "最大";
+			break;
+		default:;
+			break;
 		}
 	}
 }

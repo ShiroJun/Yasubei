@@ -1,9 +1,10 @@
 fileFormatVersion: 2
 guid: 86c2444c5b4624046a30fe7427add4e8
-timeCreated: 1459897248
+timeCreated: 1459926740
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: kanaguwaku2_0
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -49,7 +50,26 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: kanaguwaku2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12
+        width: 466
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 226, y: 118}
+        - {x: 226, y: 122}
+        - {x: -233, y: 122}
+        - {x: -233, y: -121}
+        - {x: -232, y: -122}
+        - {x: 233, y: -122}
+        - {x: 233, y: 117}
+        - {x: 232, y: 118}
     outline: []
   spritePackingTag: 
   userData: 

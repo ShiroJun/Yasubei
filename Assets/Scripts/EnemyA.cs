@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnemyA : MonoBehaviour {
+public class EnemyA : NinjaCounts {
 
     private Transform target;
     private GameObject player;
@@ -24,11 +24,19 @@ public class EnemyA : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("Bakufu"))
         {
-            Destroy(gameObject);
+            ninjaCount -= 1;
+            anim.SetTrigger("Death");
+            agent.speed = 0;
+            Debug.Log(ninjaCount);
+            Invoke("Destroy", 2);         
         }
         if (other.gameObject.CompareTag("Player"))
         {
             anim.SetTrigger("attack");
         }
+    }
+    void Destroy()
+    {
+        Destroy(gameObject);
     }
 }

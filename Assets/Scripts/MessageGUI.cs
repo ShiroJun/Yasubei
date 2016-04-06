@@ -12,12 +12,18 @@ public class MessageGUI : MonoBehaviour {
 	public Text ClearTimeText;		//テキストの中身を変える
 	public GameObject ResultObject;//メッセージのオンオフ
 
+	public float timer;
+	public Text timerText;
+
 	private List<int> intList = new List<int>();    //int型のリスト
+
+
 
 
 	void Start () {
 		SwitchList ();
 		msee0 ();
+
 	}
 	void SwitchList(){
 		for(int i = 0;i < 10;i++){
@@ -34,12 +40,21 @@ public class MessageGUI : MonoBehaviour {
 		mess6 ();
 		Gooal ();
 		ItemMess();
+		CountDown ();
+	}
+	void CountDown(){
+		if (timer > 0) {
+			timer -= 1f * Time.deltaTime;
+			timerText.text = "残り時間 : " + ((int)timer).ToString ();
+		}
 	}
 
 	void msee0(){
-		MessageText.text = "おみっちゃんに会いに行くぜ！";
-		MessageObject.SetActive (true);
-		Invoke("OnMessage", 3f);
+		if (Application.loadedLevelName == "Stage1") {
+			MessageText.text = "おみっちゃんに会いに行くぜ！";
+			MessageObject.SetActive (true);
+			Invoke("OnMessage", 3f);
+		}
 	}
 
 	void mess1(){
@@ -83,7 +98,10 @@ public class MessageGUI : MonoBehaviour {
 	}
 
 	void mess3(){
-		int count = GameObject.FindGameObjectsWithTag ("Box").Length;
+		int count = 0;
+		if (Application.loadedLevelName == "Stage1") {
+			count = GameObject.FindGameObjectsWithTag ("Box").Length;
+		}
 		if(count == 7 && intList[2] == 0){
 			MessageText.text = "これで通れるぜ！";
 			MessageObject.SetActive (true);
@@ -142,7 +160,10 @@ public class MessageGUI : MonoBehaviour {
 	}
 		
 	void mess6(){
-		int count = GameObject.FindGameObjectsWithTag ("Enemy").Length;
+		int count = 1;
+		if (Application.loadedLevelName == "Stage1") {
+			count = GameObject.FindGameObjectsWithTag ("Enemy").Length;
+		}
 		if(count == 0 && intList[9] == 0){
 			MessageText.text = "ぶっとばしたぜ！";
 			MessageObject.SetActive (true);

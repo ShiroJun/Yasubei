@@ -21,7 +21,7 @@ public class FollowPlayer : MonoBehaviour
 		if(transform.position.x < left){
 			if (transform.position.x < left && transform.position.z >= up) {
 				transform.position = new Vector3(left, 10, up-0.01f);
-				Debug.Log ("tes");
+				//Debug.Log ("tes");
 			}
 			else if (transform.position.x < left && transform.position.z < down) {
 				transform.position = new Vector3 (left, 10, down);
