@@ -1,14 +1,12 @@
 fileFormatVersion: 2
-guid: 86c2444c5b4624046a30fe7427add4e8
-timeCreated: 1459926740
-licenseType: Free
+guid: bc773641638c98c489079ab497b8315c
 TextureImporter:
   fileIDToRecycleName:
-    21300000: kanaguwaku2_0
+    21300000: NewGUISliderButton
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -28,10 +26,10 @@ TextureImporter:
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -1
-  maxTextureSize: 2048
+  maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: 16
+    aniso: 1
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -39,7 +37,7 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -51,25 +49,17 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: kanaguwaku2_0
+    - name: NewGUISliderButton
       rect:
         serializedVersion: 2
-        x: 0
-        y: 12
-        width: 466
-        height: 244
+        x: 12
+        y: 31
+        width: 102
+        height: 68
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 226, y: 118}
-        - {x: 226, y: 122}
-        - {x: -233, y: 122}
-        - {x: -233, y: -121}
-        - {x: -232, y: -122}
-        - {x: 233, y: -122}
-        - {x: 233, y: 117}
-        - {x: 232, y: 118}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 10, y: 10, z: 10, w: 10}
+      outline: []
     outline: []
   spritePackingTag: 
   userData: 

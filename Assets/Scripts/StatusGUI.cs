@@ -27,22 +27,22 @@ public class StatusGUI : MonoBehaviour {
 		int I3 = gameController.GetComponent<GameController> ().Invent; 
 
 		if (I1 <= 4) {
-			ExText.text = "Pow : " + I1.ToString ();
+			ExText.text = I1.ToString ();
 		} else if (I1 == 5) {
-			ExText.text = "Pow : MAX";
+			ExText.text = "MAX";
 			Debug.Log (I1);
 		}
 
 		if (I2 <= 4) {
-			SpText.text = "SP   : " + I2.ToString();
+			SpText.text = I2.ToString();
 		} else if (I2 == 5) {
-			SpText.text = "SP   : MAX";
+			SpText.text = "MAX";
 		}
 
 		if (I3 <= 4) {
-			InvText.text = "Num : " + I3.ToString();
+			InvText.text = I3.ToString();
 		} else if (I3 == 5) {
-			InvText.text = "Num : MAX";
+			InvText.text = "MAX";
 		}
 
 	}

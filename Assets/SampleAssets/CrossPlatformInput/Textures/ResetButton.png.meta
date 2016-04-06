@@ -1,14 +1,12 @@
 fileFormatVersion: 2
-guid: 86c2444c5b4624046a30fe7427add4e8
-timeCreated: 1459926740
-licenseType: Free
+guid: a94c9a7eb94ceec4a8d67a1890e22e51
 TextureImporter:
   fileIDToRecycleName:
-    21300000: kanaguwaku2_0
+    21300000: ResetButton
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -28,10 +26,10 @@ TextureImporter:
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -1
-  maxTextureSize: 2048
+  maxTextureSize: 1024
   textureSettings:
-    filterMode: -1
-    aniso: 16
+    filterMode: 1
+    aniso: 1
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -50,26 +48,7 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites:
-    - name: kanaguwaku2_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 12
-        width: 466
-        height: 244
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 226, y: 118}
-        - {x: 226, y: 122}
-        - {x: -233, y: 122}
-        - {x: -233, y: -121}
-        - {x: -232, y: -122}
-        - {x: 233, y: -122}
-        - {x: 233, y: 117}
-        - {x: 232, y: 118}
+    sprites: []
     outline: []
   spritePackingTag: 
   userData: 
