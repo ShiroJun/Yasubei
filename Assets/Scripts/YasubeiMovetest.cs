@@ -2,18 +2,22 @@
 using System.Collections;
 using UnityStandardAssets.CrossPlatformInput; // CrossPlatformInputManager を含む名前空間 CrossPlatforminputManager.csからもってきた
 
-public class YasubeiMovetest : MonoEX
+public class YasubeiMovetest : PlayerLife
 {
     public float speed;
     GameObject gameController;
 	private float SPPOW;
 	public bool notPass;
     private Animator anim;
+    public bool damage;
 
     void Start()
     {
+        this.tag = "Player";
         Invoke("Destroy", 100);
         anim = GetComponent<Animator>();
+        damage = false;
+        Debug.Log(life);
     }
     //private float y = 90;
     // Update is called once per frame
@@ -31,7 +35,7 @@ public class YasubeiMovetest : MonoEX
 		float h = CrossPlatformInputManager.GetAxisRaw ("Horizontal");
 		float v = CrossPlatformInputManager.GetAxisRaw("Vertical");
 		//Debug.Log(h);
-		if (notPass == true) {
+		if (notPass == true && damage == false) {
 			if (v > 0.4f)
 			{
 				transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
@@ -66,7 +70,7 @@ public class YasubeiMovetest : MonoEX
 		}
 	}
 	void PlayerControl2(){
-		if (notPass == true) {
+		if (notPass == true && damage == false) {
 			if (Input.GetKey("up"))
 			{
                 transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
@@ -104,12 +108,19 @@ public class YasubeiMovetest : MonoEX
     {
         if (hit.tag == "Enemy")
         {
-            Application.LoadLevel(Application.loadedLevel);
+            damage = true;
+            anim.SetBool("Death", true);
+            this.tag = "Untagged"; 
+            Invoke("GameOverFlag", 2f);
+
         }
-
-
-
-
+        if (hit.tag == "Bakufu")
+        {
+            damage = true;
+            this.tag = "Untagged";
+            anim.SetBool("Death", true);
+            Invoke("GameOverFlag", 2f);
+        }
         if (hit.CompareTag("Item"))
         {
             if (hit.name.IndexOf("ExPow") != -1)
@@ -143,4 +154,19 @@ public class YasubeiMovetest : MonoEX
 			notPass = true;
 		}
 	}
+
+
+    void GameOverFlag()
+    {
+        if (life >0)
+        {
+            life--;
+            Application.LoadLevel(Application.loadedLevel);
+        }
+        else
+        {
+            //gameover
+            Application.LoadLevel("Title");
+        }
+    }
 }

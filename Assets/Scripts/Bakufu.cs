@@ -18,11 +18,6 @@ public class Bakufu : Bomb
     {
         {
 
-            if (c.tag == "Player")
-            {
-                //Destroy(c.gameObject);
-                Application.LoadLevel(Application.loadedLevel);
-            }
             if (c.tag == "Item")
             {
                 Destroy(c.gameObject);

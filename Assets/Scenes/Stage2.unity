@@ -4704,6 +4704,7 @@ GameObject:
   - 114: {fileID: 1216348496}
   - 114: {fileID: 1216348495}
   - 114: {fileID: 1216348494}
+  - 114: {fileID: 1216348503}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -4783,6 +4784,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.05
   notPass: 1
+  damage: 0
 --- !u!136 &1216348499
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4849,6 +4851,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1216348503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1216348493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd31fe0ebdfab1e469953893f8afae81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1216563942
 Prefab:
   m_ObjectHideFlags: 0

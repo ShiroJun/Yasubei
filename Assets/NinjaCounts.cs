@@ -4,13 +4,13 @@ using System.Collections;
 public class NinjaCounts : MonoBehaviour {
     public static int ninjaCount;
     GameObject[] ninja;
-    public bool flag = true;
+    public bool flag;
     // Use this for initialization
     void Start () {
 	    ninja = GameObject.FindGameObjectsWithTag("Enemy");
         ninjaCount = ninja.Length;
         Debug.Log(ninjaCount);
-
+        flag = true;
     }
 	
 	// Update is called once per frame
