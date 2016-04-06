@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class EnemyB : MonoBehaviour
+public class EnemyB : NinjaCounts
 {
 
     public Transform[] points;
@@ -47,6 +47,7 @@ public class EnemyB : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Bakufu"))
         {
+            ninjaCount -= 1;
             Destroy(gameObject);
         }
         if (other.gameObject.CompareTag("Player"))
