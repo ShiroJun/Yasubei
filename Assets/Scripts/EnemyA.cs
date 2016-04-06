@@ -25,13 +25,18 @@ public class EnemyA : NinjaCounts {
         if (other.gameObject.CompareTag("Bakufu"))
         {
             ninjaCount -= 1;
+            anim.SetTrigger("Death");
+            agent.speed = 0;
             Debug.Log(ninjaCount);
-            Destroy(gameObject);
-
+            Invoke("Destroy", 2);         
         }
         if (other.gameObject.CompareTag("Player"))
         {
             anim.SetTrigger("attack");
         }
+    }
+    void Destroy()
+    {
+        Destroy(gameObject);
     }
 }
