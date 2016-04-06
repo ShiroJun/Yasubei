@@ -21,7 +21,9 @@ public class Akudaikan : MonoBehaviour {
 
         if(hp == 0)
         {
-            Destroy(gameObject);
+            anim.SetTrigger("Death");
+            agent.enabled = false;
+            Invoke("Death", 3);
         }
 
 
@@ -40,5 +42,9 @@ public class Akudaikan : MonoBehaviour {
             hp = hp-1;
         }
 
+    }
+    void Death()
+    {
+        Destroy(gameObject);
     }
 }
