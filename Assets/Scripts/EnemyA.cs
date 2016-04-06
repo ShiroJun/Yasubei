@@ -7,6 +7,7 @@ public class EnemyA : NinjaCounts {
     private GameObject player;
     NavMeshAgent agent;
     private Animator anim;
+    CapsuleCollider cap;
 
     void Start()
     {
@@ -14,11 +15,20 @@ public class EnemyA : NinjaCounts {
         target = player.GetComponent<Transform>();
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
+        cap = GetComponent<CapsuleCollider>();
     }
 
     void Update()
     {
         agent.SetDestination(target.position);
+
+        if (Akudaikan.hp <= 0)
+        {
+            anim.SetTrigger("Death");
+            agent.speed = 0;
+            cap.enabled = false;
+            Invoke("Destroy", 2);
+        }
     }
     void OnTriggerEnter(Collider other)
     {
@@ -27,6 +37,7 @@ public class EnemyA : NinjaCounts {
             ninjaCount -= 1;
             anim.SetTrigger("Death");
             agent.speed = 0;
+            cap.enabled = false;
             Debug.Log(ninjaCount);
             Invoke("Destroy", 2);         
         }

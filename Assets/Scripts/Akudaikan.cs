@@ -5,13 +5,18 @@ public class Akudaikan : MonoBehaviour {
 
    // public Transform target;
     NavMeshAgent agent;
+    CapsuleCollider cap;
     private Animator anim;
-    public int hp = 3;
+    public static int hp = 1;
+    private GameObject bighanabi;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
+        cap = GetComponent<CapsuleCollider>();
+        bighanabi = GameObject.Find("BigHanabi");
+        bighanabi.SetActive(false);
     }
 
     void Update()
@@ -19,11 +24,13 @@ public class Akudaikan : MonoBehaviour {
         //anim.SetBool("Escape", true);
         //agent.SetDestination(target.position);
 
-        if(hp == 0)
+        if (hp <= 0)
         {
             anim.SetTrigger("Death");
             agent.enabled = false;
-            Invoke("Death", 3);
+            cap.enabled = false;
+            //Invoke("Death", 3);
+            Invoke("FireCreator", 4);
         }
 
 
@@ -46,5 +53,9 @@ public class Akudaikan : MonoBehaviour {
     void Death()
     {
         Destroy(gameObject);
+    }
+    void FireCreator()
+    {
+        bighanabi.gameObject.SetActive(true);
     }
 }
