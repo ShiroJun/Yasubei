@@ -7,7 +7,7 @@ public class Item : MonoBehaviour
 	{
 		//Invoke("Invincible", 1);
 		// 接触対象はPlayerタグですか？
-		Debug.Log(hit.name);
+		//Debug.Log(hit.name);
 		if (hit.CompareTag ("Player")) {
 			// このコンポーネントを持つGameObjectを破棄する
 			Destroy(gameObject);

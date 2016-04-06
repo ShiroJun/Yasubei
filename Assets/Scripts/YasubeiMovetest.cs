@@ -30,7 +30,7 @@ public class YasubeiMovetest : MonoEX
 	void PlayerControl(){
 		float h = CrossPlatformInputManager.GetAxisRaw ("Horizontal");
 		float v = CrossPlatformInputManager.GetAxisRaw("Vertical");
-		Debug.Log(h);
+		//Debug.Log(h);
 		if (notPass == true) {
 			if (v > 0.4f)
 			{

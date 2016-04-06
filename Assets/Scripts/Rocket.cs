@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Rocket : MonoBehaviour {
+public class Rocket : NinjaCounts {
     GameObject player;
     Rigidbody rb;
     public float speed;
@@ -22,6 +22,7 @@ public class Rocket : MonoBehaviour {
     {
         if (c.tag == "Enemy")
         {
+            ninjaCount -= 1;
             Destroy(c.gameObject);
         }
         if (c.tag == "Box")
