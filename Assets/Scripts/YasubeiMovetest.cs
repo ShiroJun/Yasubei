@@ -166,6 +166,7 @@ public class YasubeiMovetest : PlayerLife
         else
         {
             //gameover
+            life = 3;
             Application.LoadLevel("Title");
         }
     }

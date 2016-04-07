@@ -1480,22 +1480,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6b6e5ee84fbefad4fa340bfdd019f533, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &300002915 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 123030, guid: d34339d2673aea14e973bf7b769b5436, type: 2}
-  m_PrefabInternal: {fileID: 47548998}
---- !u!114 &300002916
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 300002915}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ccebbe73e6fe9343a312d200418a7a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flag: 1
 --- !u!1 &312022027
 GameObject:
   m_ObjectHideFlags: 0
@@ -2238,6 +2222,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22478018, guid: 77221ac5fd7d57a42a19a7c7e12c76ba, type: 2}
       propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 190262, guid: 77221ac5fd7d57a42a19a7c7e12c76ba, type: 2}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
