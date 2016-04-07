@@ -9,6 +9,8 @@ public class Akudaikan : MonoBehaviour {
     private Animator anim;
     public static int hp = 1;
     private GameObject bighanabi;
+    private GameObject gamec;
+    private AudioSource audio;
 
     void Start()
     {
@@ -17,6 +19,9 @@ public class Akudaikan : MonoBehaviour {
         cap = GetComponent<CapsuleCollider>();
         bighanabi = GameObject.Find("BigHanabi");
         bighanabi.SetActive(false);
+        gamec = GameObject.Find("GameController");
+        audio = gamec.GetComponent<AudioSource>();
+
     }
 
     void Update()
@@ -26,6 +31,7 @@ public class Akudaikan : MonoBehaviour {
 
         if (hp <= 0)
         {
+            audio.Stop();
             anim.SetTrigger("Death");
             agent.enabled = false;
             cap.enabled = false;
