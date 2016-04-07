@@ -2,7 +2,7 @@
 using System.Collections;
 using System;
 
-public class BombCreator : MonoEX
+public class BombCreator : GameController
 {
     public GameObject pos;
     public GameObject bomb;
@@ -23,12 +23,12 @@ public class BombCreator : MonoEX
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown("space"))
         {
             gameController = GameObject.Find("GameController");
-            int Invent = gameController.GetComponent<GameController>().Invent;
+            int invent = Invent;
             bombObjects = GameObject.FindGameObjectsWithTag("BombAfter");
             bombCount = bombObjects.Length;
 
 
-            if (bombCount < Invent)
+            if (bombCount < invent)
             {
 
                 GameObject.Find("GameController");
@@ -41,12 +41,12 @@ public class BombCreator : MonoEX
 	public void BombCreat2()
 	{
 			gameController = GameObject.Find("GameController");
-			int Invent = gameController.GetComponent<GameController>().Invent;
+			int invent = Invent;
 			bombObjects = GameObject.FindGameObjectsWithTag("BombAfter");
 			bombCount = bombObjects.Length;
 
 
-			if (bombCount < Invent)
+			if (bombCount < invent)
 			{
 
 				GameObject.Find("GameController");

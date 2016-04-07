@@ -30,7 +30,7 @@ public class Bakufu : Bomb
                 //go.transform.position = pos.transform.position;
 
                 gameController = GameObject.Find("GameController");
-                int pow = gameController.GetComponent<GameController>().ExPow;
+                int pow = ExPow;
                 if (pow >= 6)
                 {
                     pow = 5;

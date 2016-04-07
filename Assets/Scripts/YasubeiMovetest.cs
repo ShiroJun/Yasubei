@@ -24,7 +24,7 @@ public class YasubeiMovetest : PlayerLife
     void Update()
     {
         gameController = GameObject.Find("GameController");
-		SPPOW = speed + (gameController.GetComponent<GameController>().SpPow * 0.01f);
+		SPPOW = speed + (SpPow * 0.01f);
     }
     void FixedUpdate()
     {
@@ -125,23 +125,23 @@ public class YasubeiMovetest : PlayerLife
         {
             if (hit.name.IndexOf("ExPow") != -1)
             {
-				if(gameController.GetComponent<GameController>().ExPow < 5){
+				if(ExPow < 5){
 					gameController = GameObject.Find("GameController");
-					gameController.GetComponent<GameController>().ExPow += 1;
+					ExPow += 1;
 				}
             }
             else if (hit.name.IndexOf("SpPow") != -1)
             {
-				if (gameController.GetComponent<GameController> ().SpPow < 5) {
+				if (SpPow < 5) {
 					gameController = GameObject.Find("GameController");
-					gameController.GetComponent<GameController>().SpPow += 1;
+					SpPow += 1;
 				}
             }
             else if (hit.name.IndexOf("Invent") != -1)
             {
-				if (gameController.GetComponent<GameController> ().Invent < 5) {
+				if (Invent < 5) {
 					gameController = GameObject.Find("GameController");
-					gameController.GetComponent<GameController>().Invent += 1;
+					Invent += 1;
 				}
             }
         }

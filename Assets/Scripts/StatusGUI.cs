@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class StatusGUI : MonoBehaviour {
+public class StatusGUI : GameController {
 
 
 	GameObject gameController;
@@ -21,9 +21,9 @@ public class StatusGUI : MonoBehaviour {
 
 	void ItemPow(){
 		gameController = GameObject.Find ("GameController");									//クラスの指名
-		int I1 = gameController.GetComponent<GameController> ().ExPow;
-		int I2 = gameController.GetComponent<GameController> ().SpPow;
-		int I3 = gameController.GetComponent<GameController> ().Invent; 
+		int I1 = ExPow;
+		int I2 = SpPow;
+		int I3 = Invent; 
 
 		switch (I1){
 		case 1:
