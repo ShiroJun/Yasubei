@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerLife : MonoEX {
+public class PlayerLife : GameController {
     public static int life;
     public static int start = 0;
     // Use this for initialization

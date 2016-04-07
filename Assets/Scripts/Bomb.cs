@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Bomb : MonoEX
+public class Bomb : GameController
 {
     GameObject gameController;
     public GameObject FireworksMix;
@@ -32,7 +32,7 @@ public class Bomb : MonoEX
         //GameObject go = instantiateGameObject("Prefab/FireworksMix"); // 花火を生成　
         //go.transform.position = pos.transform.position;               //　花火のpostionをボムの位置にする
         gameController = GameObject.Find("GameController");
-        int pow = gameController.GetComponent<GameController>().ExPow;
+        int pow = ExPow;
         if (pow >= 6)
         {
             pow = 5;
