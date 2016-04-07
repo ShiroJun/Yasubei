@@ -499,6 +499,7 @@ GameObject:
   - 114: {fileID: 11414400}
   - 114: {fileID: 11468760}
   - 114: {fileID: 11435014}
+  - 114: {fileID: 11440726}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1423,7 +1424,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 165532}
   serializedVersion: 2
-  m_Mass: 0.0000001
+  m_Mass: 0.01
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -1490,8 +1491,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5677705c7b0984144a9fbc902ae857b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.05
+  speed: 0.02
   notPass: 1
+  damage: 0
 --- !u!114 &11435014
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1501,6 +1503,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: acdd8ae1d7190ab489983be10bf7bebd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11440726
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 165532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd31fe0ebdfab1e469953893f8afae81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &11468760
