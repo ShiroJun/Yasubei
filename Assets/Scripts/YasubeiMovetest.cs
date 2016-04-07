@@ -156,18 +156,5 @@ public class YasubeiMovetest : PlayerLife
 	}
 
 
-    void GameOverFlag()
-    {
-        if (life >0)
-        {
-            life--;
-            Application.LoadLevel(Application.loadedLevel);
-        }
-        else
-        {
-            //gameover
-            life = 3;
-            Application.LoadLevel("Title");
-        }
-    }
+
 }

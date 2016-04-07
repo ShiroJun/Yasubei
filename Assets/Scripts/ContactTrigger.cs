@@ -4,16 +4,19 @@ using System.Collections;
 public class ContactTrigger : MonoBehaviour {
 
 	private Animator anim;
-	public bool Trigger00 = false;
-	public bool Trigger01  = false;
-	public bool Trigger02  = false;
-	public bool Trigger03  = false;
-	public bool ItemTrigger1 = false;
-	public bool ItemTrigger2 = false;
-	public bool ItemTrigger3 = false;
-	public bool GoalArea = false;
+	public static bool Trigger00 = false;
+	public static bool Trigger01  = false;
+	public static bool Trigger02  = false;
+	public static bool Trigger03  = false;
+	public static bool ItemTrigger1 = false;
+	public static bool ItemTrigger2 = false;
+	public static bool ItemTrigger3 = false;
+	public static bool EnemyTrigger1 = false;
+	public static bool GoalArea = false;
 	void Start () {
 		anim = GetComponent<Animator>();
+		GoalArea = false;
+		EnemyTrigger1 = false;
 	}
 	
 	// Update is called once per frame
@@ -25,19 +28,21 @@ public class ContactTrigger : MonoBehaviour {
 		
 		if (hit.name.IndexOf ("Trigger00") != -1) {
 			Trigger00 = true;
-		}
-		else if (hit.name.IndexOf ("Trigger01") != -1) {
+		} else if (hit.name.IndexOf ("Trigger01") != -1) {
 			Trigger01 = true;
-		}
-		else if (hit.name.IndexOf ("Trigger02") != -1) {
+		} else if (hit.name.IndexOf ("Trigger02") != -1) {
 			Trigger02 = true;
-		}
-		else if (hit.name.IndexOf ("Trigger03") != -1) {
+		} else if (hit.name.IndexOf ("Trigger03") != -1) {
 			Trigger03 = true;
-		}
-		else if (hit.name.IndexOf ("Tegata") != -1) {
+		} else if (hit.name.IndexOf ("Tegata") != -1) {
 			GoalArea = true;
-			anim.SetBool("Victory", true);
+			anim.SetBool ("Victory", true);
+		} else if (hit.CompareTag ("Enemy")) {
+			PlayerLife.life--;
+			EnemyTrigger1 = true;
+		}else if (hit.CompareTag ("Bakufu")) {
+			PlayerLife.life--;
+			EnemyTrigger1 = true;
 		}
 		else if (hit.CompareTag ("Item")) {
 			if (Application.loadedLevelName == "Stage1") {

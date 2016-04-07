@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Collections;
 
-public class MessageGUI : MonoBehaviour {
+public class MessageGUI : ContactTrigger {
 	GameObject player;
 	public Text MessageText;		//テキストの中身を変える
 	public GameObject MessageObject;//メッセージのオンオフ
@@ -12,17 +12,16 @@ public class MessageGUI : MonoBehaviour {
 	public Text ClearTimeText;		//テキストの中身を変える
 	public GameObject ResultObject;//メッセージのオンオフ
 
+	public GameObject RespawnObject;
+	public Text RespawnText;
+	public GameObject GameOverObject;
+
 	public float timer;
 	private float timer2;
 	public Text timerText;
 
-	private List<int> intList = new List<int>();    //int型のリスト
+	private static List<int> intList = new List<int>();    //int型のリスト
 	private bool timerflag = true;
-
-
-
-
-
 
 	void Start () {
 		SwitchList ();
@@ -85,6 +84,8 @@ public class MessageGUI : MonoBehaviour {
 		Goal ();
 		ItemMess();
 		CountDown ();
+		Respawn ();
+		GameOver ();
 	}
 	void CountDown(){
 		if (timer > 0) {
@@ -105,9 +106,7 @@ public class MessageGUI : MonoBehaviour {
 	}
 
 	void mess1(){
-		player = GameObject.Find ("Player");
-		bool tri1 = player.GetComponent<ContactTrigger> ().Trigger00;
-		if (tri1 == true && intList[0] == 0) {
+		if (Trigger00 == true && intList[0] == 0) {
 			MessageText.text = "あそこにイイ物が落ちてるぜ！";
 			MessageObject.SetActive (true);
 			intList[0] = 1;
@@ -125,9 +124,7 @@ public class MessageGUI : MonoBehaviour {
 	}
 
 	void mess2(){
-		player = GameObject.Find ("Player");
-		bool tri2 = player.GetComponent<ContactTrigger> ().Trigger01;
-		if (tri2 == true && intList[1] == 0) {
+		if (Trigger01 == true && intList[1] == 0) {
 			MessageText.text = "これじゃあ、通れないぜ";
 			MessageObject.SetActive (true);
 			intList[1] = 1;
@@ -167,9 +164,7 @@ public class MessageGUI : MonoBehaviour {
 	}
 
 	void mess4(){
-		player = GameObject.Find ("Player");
-		bool tri3 = player.GetComponent<ContactTrigger> ().Trigger02;
-		if (tri3 == true && intList[6] == 0) {
+		if (Trigger02 == true && intList[6] == 0) {
 			MessageText.text = "道に石を置いてるヤツがいる！";
 			MessageObject.SetActive (true);
 			intList[6] = 1;
@@ -187,9 +182,7 @@ public class MessageGUI : MonoBehaviour {
 	}
 
 	void mess5(){
-		player = GameObject.Find ("Player");
-		bool tri4 = player.GetComponent<ContactTrigger> ().Trigger03;
-		if (tri4 == true && intList[7] == 0) {
+		if (Trigger03 == true && intList[7] == 0) {
 			MessageText.text = "手形が落ちてるぜ！";
 			MessageObject.SetActive (true);
 			intList[7] = 1;
@@ -221,9 +214,7 @@ public class MessageGUI : MonoBehaviour {
 	}
 
 	void Gooal(){
-		player = GameObject.Find ("Player");
-		bool tri4 = player.GetComponent<ContactTrigger> ().GoalArea;
-		if (tri4 == true && intList[8] == 0) {
+		if (GoalArea == true && intList[8] == 0) {
 			MessageText.text = "おみっちゃん待っててくれ！";
 			intList[8] = 1;
 			CancelInvoke ("OnMessage");
@@ -233,9 +224,7 @@ public class MessageGUI : MonoBehaviour {
 		}
 	}
 	void Goal(){
-		player = GameObject.Find ("Player");
-		bool tri4 = player.GetComponent<ContactTrigger> ().GoalArea;
-		if (tri4 == true) {
+		if (GoalArea == true) {
 			timerflag = false;
 			int ttt = PlayerPrefs.GetInt ("highScore1");
 			if (Application.loadedLevelName == "Stage2") {
@@ -291,13 +280,33 @@ public class MessageGUI : MonoBehaviour {
 	void OnClear(){
 		ResultObject.SetActive (true);
 	}
+	void Respawn(){
+		int LP = PlayerLife.life;
+		if(LP > 0 && EnemyTrigger1 == true){
+			RespawnText.text = "鈴木魂 : " + LP;
+			Invoke("Resp", 1f);
+			Debug.Log ("ああああ");
+		}
+	}
+	void Resp(){
+		RespawnObject.SetActive (true);
+		EnemyTrigger1 = false;
+	}
+
+	void GameOver(){
+		int LP = PlayerLife.life;
+		if(LP == 0 && EnemyTrigger1 == true){
+			Invoke("GaOv", 1f);
+		}
+	}
+
+	void GaOv(){
+		GameOverObject.SetActive (true);
+		PlayerLife.start = 0;
+	}
 
 	void ItemMess(){
-		player = GameObject.Find ("Player");
-		bool tri2 = player.GetComponent<ContactTrigger> ().ItemTrigger1;
-		bool tri3 = player.GetComponent<ContactTrigger> ().ItemTrigger2;
-		bool tri4 = player.GetComponent<ContactTrigger> ().ItemTrigger3;
-		if (tri2 == true && intList[3] == 0) {
+		if (ItemTrigger1 == true && intList[3] == 0) {
 			MessageText.text = "火力が強くなった！";
 			MessageObject.SetActive (true);
 			intList[3] = 1;
@@ -305,7 +314,7 @@ public class MessageGUI : MonoBehaviour {
 			CancelInvoke ("messtext");
 			Invoke("OnMessage", 3f);
 		}
-		if (tri3 == true && intList[4] == 0) {
+		if (ItemTrigger2 == true && intList[4] == 0) {
 			MessageText.text = "足が速くなった！";
 			MessageObject.SetActive (true);
 			intList[4] = 1;
@@ -313,7 +322,7 @@ public class MessageGUI : MonoBehaviour {
 			CancelInvoke ("messtext");
 			Invoke("OnMessage", 3f);
 		}
-		if (tri4 == true && intList[5] == 0) {
+		if (ItemTrigger3 == true && intList[5] == 0) {
 			MessageText.text = "沢山持てるようになった！";
 			MessageObject.SetActive (true);
 			intList[5] = 1;
