@@ -16,7 +16,7 @@ public class TextUP : MonoBehaviour {
         }
         if (Input.GetMouseButtonDown(0))
         {
-            Application.LoadLevel("Stage3");
+            Application.LoadLevel("Title");
         }
        
 	}

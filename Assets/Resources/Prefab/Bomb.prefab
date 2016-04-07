@@ -9,11 +9,11 @@ GameObject:
   m_Component:
   - 4: {fileID: 475234}
   - 33: {fileID: 3329980}
-  - 135: {fileID: 13560006}
   - 23: {fileID: 2314210}
   - 95: {fileID: 9516338}
   - 114: {fileID: 11422800}
   - 54: {fileID: 5496676}
+  - 65: {fileID: 6501220}
   m_Layer: 0
   m_Name: Bomb
   m_TagString: Bomb
@@ -136,7 +136,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 103256}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 100
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
@@ -144,6 +144,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!65 &6501220
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 103256}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &9516338
 Animator:
   serializedVersion: 3
@@ -172,6 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 214e8127067bd7548bfebf1e13d4aa6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Items: []
   FireworksMix: {fileID: 153334, guid: 65cba898932216e4389770d795c20cfb, type: 2}
   FirewrksMixs:
   - {fileID: 108688, guid: 09b3899239c54c0408dacffe6309f67a, type: 2}
@@ -179,18 +192,6 @@ MonoBehaviour:
   - {fileID: 195632, guid: b8856c7f77121de468e170a8aa09d11f, type: 2}
   - {fileID: 187588, guid: 493c839f73896af469a35fb33ead1e09, type: 2}
   - {fileID: 135210, guid: 31aa95edf4bfab74e85547b5f7e38002, type: 2}
---- !u!135 &13560006
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 103256}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
