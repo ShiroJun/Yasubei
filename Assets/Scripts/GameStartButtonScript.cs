@@ -20,4 +20,8 @@ public class GameStartButtonScript : MonoBehaviour
     {
         Application.LoadLevel("BossStage");
     }
+    public void ToStory()
+    {
+        Application.LoadLevel("Story");
+    }
 }
