@@ -75,16 +75,16 @@ NavMeshSettings:
   m_ObjectHideFlags: 0
   m_BuildSettings:
     serializedVersion: 2
-    agentRadius: 0.3
+    agentRadius: 0.15
     agentHeight: 2
     agentSlope: 45
-    agentClimb: 0.4
+    agentClimb: 0
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     accuratePlacement: 0
     minRegionArea: 2
-    cellSize: 0.1
-    manualCellSize: 0
+    cellSize: 0.01
+    manualCellSize: 1
   m_NavMeshData: {fileID: 23800000, guid: de224d60d0759f34686b12e709bdebe0, type: 2}
 --- !u!4 &13765615 stripped
 Transform:
@@ -399,21 +399,9 @@ Prefab:
       propertyPath: points.Array.data[1]
       value: 
       objectReference: {fileID: 1912938465}
-    - target: {fileID: 455282, guid: b6a54b249dfe19d4a8318857548cd88d, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 455282, guid: b6a54b249dfe19d4a8318857548cd88d, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 189688, guid: b6a54b249dfe19d4a8318857548cd88d, type: 2}
       propertyPath: m_Name
       value: Ninjared (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 189688, guid: b6a54b249dfe19d4a8318857548cd88d, type: 2}
-      propertyPath: m_TagString
-      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b6a54b249dfe19d4a8318857548cd88d, type: 2}
@@ -791,7 +779,7 @@ GameObject:
   - 33: {fileID: 453876768}
   - 136: {fileID: 453876767}
   - 23: {fileID: 453876766}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NinjaPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -816,7 +804,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 453876764}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
@@ -1269,7 +1257,7 @@ GameObject:
   - 33: {fileID: 531806596}
   - 136: {fileID: 531806595}
   - 23: {fileID: 531806594}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NinjaPoint (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1294,7 +1282,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 531806592}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
@@ -1552,7 +1540,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 190262, guid: 77221ac5fd7d57a42a19a7c7e12c76ba, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77221ac5fd7d57a42a19a7c7e12c76ba, type: 2}
@@ -2509,10 +2497,6 @@ Prefab:
       propertyPath: points.Array.data[1]
       value: 
       objectReference: {fileID: 531806593}
-    - target: {fileID: 189688, guid: b6a54b249dfe19d4a8318857548cd88d, type: 2}
-      propertyPath: m_TagString
-      value: Enemy
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b6a54b249dfe19d4a8318857548cd88d, type: 2}
   m_IsPrefabParent: 0
@@ -3727,7 +3711,7 @@ GameObject:
   - 33: {fileID: 1729201397}
   - 136: {fileID: 1729201396}
   - 23: {fileID: 1729201395}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NinjaPoint (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3752,7 +3736,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1729201393}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
@@ -3898,7 +3882,7 @@ GameObject:
   - 33: {fileID: 1912938468}
   - 136: {fileID: 1912938467}
   - 23: {fileID: 1912938466}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NinjaPoint (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3923,7 +3907,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1912938464}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
