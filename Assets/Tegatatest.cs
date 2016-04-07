@@ -18,7 +18,10 @@ public class Tegatatest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(Akudaikan.hp <= 0)
+        {
+            anim.SetBool("Victory", true);
+        }
     }
 
     void OnTriggerEnter(Collider other)
