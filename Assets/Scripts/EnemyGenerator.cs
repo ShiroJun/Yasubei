@@ -24,10 +24,10 @@ public class EnemyGenerator : MonoBehaviour
     //敵を作成する
     IEnumerator Exec()
     {
-        if (Akudaikan.hp > 0)
+        while(Akudaikan.hp > 0)
         {
             Generate();
-            yield return new WaitForSeconds(9.0f);
+            yield return new WaitForSeconds(8.0f);
         }
     }
 
