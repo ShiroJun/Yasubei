@@ -13,9 +13,13 @@ public class MessageGUI : MonoBehaviour {
 	public GameObject ResultObject;//メッセージのオンオフ
 
 	public float timer;
+	private float timer2;
 	public Text timerText;
 
 	private List<int> intList = new List<int>();    //int型のリスト
+	private bool timerflag = true;
+
+
 
 
 
@@ -23,8 +27,47 @@ public class MessageGUI : MonoBehaviour {
 	void Start () {
 		SwitchList ();
 		msee0 ();
+		Awake ();
+	}
+
+	void Awake () {
+		if (Application.loadedLevelName == "Stage1") {
+			if (!PlayerPrefs.HasKey ("highScore1")) {
+				SetKey ();
+			}
+		}
+		if (Application.loadedLevelName == "Stage2") {
+			if (!PlayerPrefs.HasKey ("highScore2")) {
+				SetKey ();
+			}
+		}
+		if (Application.loadedLevelName == "Stage3") {
+			if (!PlayerPrefs.HasKey ("highScore3")) {
+				SetKey ();
+			}
+		}
+		if (Application.loadedLevelName == "BossStage") {
+			if (!PlayerPrefs.HasKey ("highScore4")) {
+				SetKey ();
+			}
+		}
+	}
+	void SetKey(){
+		if (Application.loadedLevelName == "Stage1") {
+			PlayerPrefs.SetInt("Stage1", 999); 
+		}
+		if (Application.loadedLevelName == "Stage2") {
+			PlayerPrefs.SetInt("Stage2", 999); 
+		}
+		if (Application.loadedLevelName == "Stage3") {
+			PlayerPrefs.SetInt("Stage3", 999); 
+		}
+		if (Application.loadedLevelName == "BossStage") {
+			PlayerPrefs.SetInt("BossStage", 999); 
+		}
 
 	}
+
 	void SwitchList(){
 		for(int i = 0;i < 10;i++){
 			intList.Add(0);
@@ -39,13 +82,17 @@ public class MessageGUI : MonoBehaviour {
 		mess5 ();
 		mess6 ();
 		Gooal ();
+		Goal ();
 		ItemMess();
 		CountDown ();
 	}
 	void CountDown(){
 		if (timer > 0) {
-			timer -= 1f * Time.deltaTime;
-			timerText.text = "残り時間 : " + ((int)timer).ToString ();
+			if(timerflag == true){
+				timer -= 1f * Time.deltaTime;
+				timer2 += 1f * Time.deltaTime;
+				timerText.text = "残り時間 : " + ((int)timer).ToString ();
+			}
 		}
 	}
 
@@ -178,7 +225,6 @@ public class MessageGUI : MonoBehaviour {
 		bool tri4 = player.GetComponent<ContactTrigger> ().GoalArea;
 		if (tri4 == true && intList[8] == 0) {
 			MessageText.text = "おみっちゃん待っててくれ！";
-			MessageObject.SetActive (true);
 			intList[8] = 1;
 			CancelInvoke ("OnMessage");
 			CancelInvoke ("messtext5");
@@ -186,6 +232,62 @@ public class MessageGUI : MonoBehaviour {
 			Invoke("OnClear", 3f);
 		}
 	}
+	void Goal(){
+		player = GameObject.Find ("Player");
+		bool tri4 = player.GetComponent<ContactTrigger> ().GoalArea;
+		if (tri4 == true) {
+			timerflag = false;
+			int ttt = PlayerPrefs.GetInt ("highScore1");
+			if (Application.loadedLevelName == "Stage2") {
+				ttt = PlayerPrefs.GetInt ("highScore2");
+			}
+			if (Application.loadedLevelName == "Stage3") {
+				ttt = PlayerPrefs.GetInt ("highScore3");
+			}
+			if (Application.loadedLevelName == "BossStage") {
+				ttt = PlayerPrefs.GetInt ("highScore4");
+			}
+			ClearTimeText.text = "只今の時間 : " + ((int)timer2).ToString ();
+			HiTimeText.text = "最短時間 : " + ttt.ToString ();
+			Invoke("SaveHighScore", 1f);
+			MessageObject.SetActive (true);
+			intList[8] = 1;
+			Invoke("OnClear", 3f);
+		}
+	}
+
+	void SaveHighScore(){
+		int tim = (int)timer2;
+		if (Application.loadedLevelName == "Stage1") {
+			int ttt = PlayerPrefs.GetInt ("highScore1");
+			if (tim < ttt) {
+				PlayerPrefs.SetInt("highScore1", tim);
+				PlayerPrefs.Save();//なくてもいけど、あると安心
+			}
+		}
+		if (Application.loadedLevelName == "Stage2") {
+			int ttt = PlayerPrefs.GetInt ("highScore2");
+			if (tim < ttt) {
+				PlayerPrefs.SetInt("highScore2", tim);
+				PlayerPrefs.Save();//なくてもいけど、あると安心
+			}
+		}
+		if (Application.loadedLevelName == "Stage3") {
+			int ttt = PlayerPrefs.GetInt ("highScore3");
+			if (tim < ttt) {
+				PlayerPrefs.SetInt("highScore3", tim);
+				PlayerPrefs.Save();//なくてもいけど、あると安心
+			}
+		}
+		if (Application.loadedLevelName == "BossStage") {
+			int ttt = PlayerPrefs.GetInt ("highScore4");
+			if (tim < ttt) {
+				PlayerPrefs.SetInt("highScore4", tim);
+				PlayerPrefs.Save();//なくてもいけど、あると安心
+			}
+		}
+	}
+
 	void OnClear(){
 		ResultObject.SetActive (true);
 	}

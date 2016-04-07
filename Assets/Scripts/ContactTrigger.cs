@@ -35,6 +35,10 @@ public class ContactTrigger : MonoBehaviour {
 		else if (hit.name.IndexOf ("Trigger03") != -1) {
 			Trigger03 = true;
 		}
+		else if (hit.name.IndexOf ("Tegata") != -1) {
+			GoalArea = true;
+			anim.SetBool("Victory", true);
+		}
 		else if (hit.CompareTag ("Item")) {
 			if (Application.loadedLevelName == "Stage1") {
 				if (hit.name.IndexOf ("ExPow") != -1) {
@@ -45,10 +49,6 @@ public class ContactTrigger : MonoBehaviour {
 				}
 				else if (hit.name.IndexOf ("Invent") != -1) {
 					ItemTrigger3 = true;
-				}
-				else if (hit.name.IndexOf ("Tegata") != -1) {
-					GoalArea = true;
-					anim.SetBool("Victory", true);
 				}
 			}
 
