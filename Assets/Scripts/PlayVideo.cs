@@ -11,14 +11,17 @@ public class PlayVideo : MonoBehaviour {
     private AudioSource audio;
 
 	void Start () {
-        GetComponent<RawImage>().texture = movie as MovieTexture;
-        audio = GetComponent<AudioSource>();
-        audio.clip = movie.audioClip;
-        movie.Play();
-        audio.Play();
-	}
-	
-	void Update () {
+
+        #if UNITY_STANDALONE_WIN
+            GetComponent<RawImage>().texture = movie as MovieTexture;
+            audio = GetComponent<AudioSource>();
+            audio.clip = movie.audioClip;
+            movie.Play();
+            audio.Play();
+        #endif
+    }
+
+    void Update () {
         if (!movie.isPlaying)
         {
             SceneManager.LoadScene("Title");

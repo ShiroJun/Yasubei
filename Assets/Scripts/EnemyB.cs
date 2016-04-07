@@ -7,16 +7,14 @@ public class EnemyB : NinjaCounts
     private int destPoint = 0;
     private NavMeshAgent agent;
     private Animator anim;
+    CapsuleCollider cap;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
-        // Disabling auto-braking allows for continuous movement
-        // between points (ie, the agent doesn't slow down as it
-        // approaches a destination point).
         agent.autoBraking = false;
-
+        cap = GetComponent<CapsuleCollider>();
         GotoNextPoint();
     }
 
@@ -50,6 +48,7 @@ public class EnemyB : NinjaCounts
             ninjaCount -= 1;
             anim.SetTrigger("Death");
             agent.speed = 0;
+            cap.enabled = false;
             Invoke("Destroy", 2);
         }
         if (other.gameObject.CompareTag("Player"))
