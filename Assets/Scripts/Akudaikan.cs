@@ -8,7 +8,7 @@ public class Akudaikan : PlayerLife
     NavMeshAgent agent;
     CapsuleCollider cap;
     private Animator anim;
-    public static int hp = 1;
+    public static int hp = 3;
     private GameObject bighanabi;
     private GameObject gamec;
     private AudioSource audio;

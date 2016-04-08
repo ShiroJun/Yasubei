@@ -183,6 +183,10 @@ Prefab:
       propertyPath: m_Name
       value: Nagaya (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 198658, guid: b1dbeb9c19740744a82f762fabc0a65a, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b1dbeb9c19740744a82f762fabc0a65a, type: 2}
   m_IsPrefabParent: 0
@@ -1411,6 +1415,10 @@ Prefab:
     - target: {fileID: 198658, guid: b1dbeb9c19740744a82f762fabc0a65a, type: 2}
       propertyPath: m_Name
       value: Nagaya (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 198658, guid: b1dbeb9c19740744a82f762fabc0a65a, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b1dbeb9c19740744a82f762fabc0a65a, type: 2}
