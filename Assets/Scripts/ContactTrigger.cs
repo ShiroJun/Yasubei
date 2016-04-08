@@ -21,9 +21,12 @@ public class ContactTrigger : Akudaikan {
 	
 	// Update is called once per frame
 	void Update () {
-	
-	}
-	void OnTriggerEnter (Collider hit)
+        if (Akudaikan.hp <= 0)
+        {
+            anim.SetBool("Victory", true);
+        }
+    }
+    void OnTriggerEnter (Collider hit)
 	{
 		
 		if (hit.name.IndexOf ("Trigger00") != -1) {
