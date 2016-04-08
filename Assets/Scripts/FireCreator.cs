@@ -32,7 +32,7 @@ public class FireCreator : MonoBehaviour {
     }
     void Ending()
     {
-        SceneManager.LoadScene("MovieTest");
+        SceneManager.LoadScene("StaffRole");
     }
    void Hanabipattern()
     {

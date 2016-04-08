@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class BombCreator : GameController
 {
@@ -20,7 +21,7 @@ public class BombCreator : GameController
     }
     public void BombCreat()
     {
-        if (Input.GetKeyDown("space"))
+        if (Input.GetKeyDown("space") || CrossPlatformInputManager.GetButton("Hanabi"))
         {
             gameController = GameObject.Find("GameController");
             int invent = Invent;

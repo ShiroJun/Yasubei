@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class RocketCreator : MonoBehaviour {
     public GameObject Rocket;
@@ -13,7 +14,7 @@ public class RocketCreator : MonoBehaviour {
 	}
     public void RocketCreat()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R) || CrossPlatformInputManager.GetButton("Rocket"))
         {
             if (RocketCount == 1)
             {
