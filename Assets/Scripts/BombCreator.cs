@@ -20,7 +20,7 @@ public class BombCreator : GameController
     }
     public void BombCreat()
     {
-        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown("space"))
+        if (Input.GetKeyDown("space"))
         {
             gameController = GameObject.Find("GameController");
             int invent = Invent;
