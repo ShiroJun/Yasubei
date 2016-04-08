@@ -21,12 +21,13 @@ public class BottonScript : MonoBehaviour {
 	}
 	public void GoNext() {
 		if (Application.loadedLevelName == "Stage1") {
+			PlayerLife.start = 0;
+			Application.LoadLevel ("Title");
+		}
+		else if (Application.loadedLevelName == "Stage3") {
 			Application.LoadLevel ("Stage2");
 		}
 		else if (Application.loadedLevelName == "Stage2") {
-			Application.LoadLevel ("Stage3");
-		}
-		else if (Application.loadedLevelName == "Stage3") {
 			Application.LoadLevel ("BossStage");
 		}
 	}

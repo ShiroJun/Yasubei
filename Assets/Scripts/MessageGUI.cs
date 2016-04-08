@@ -19,6 +19,7 @@ public class MessageGUI : ContactTrigger {
 	public float timer;
 	private float timer2;
 	public Text timerText;
+	public Text ButtonText;
 
 	private static List<int> intList = new List<int>();    //int型のリスト
 	private bool timerflag = true;
@@ -31,6 +32,7 @@ public class MessageGUI : ContactTrigger {
 
 	void Awake () {
 		if (Application.loadedLevelName == "Stage1") {
+			ButtonText.text = "始めに戻る";
 			if (!PlayerPrefs.HasKey ("highScore1")) {
 				SetKey ();
 			}
@@ -41,6 +43,11 @@ public class MessageGUI : ContactTrigger {
 			}
 		}
 		if (Application.loadedLevelName == "Stage3") {
+			if (PlayerLife.start == 0) {
+				GameController.ExPow = 1;
+				GameController.SpPow = 1;
+				GameController.Invent = 1;
+			}
 			if (!PlayerPrefs.HasKey ("highScore3")) {
 				SetKey ();
 			}
@@ -113,6 +120,7 @@ public class MessageGUI : ContactTrigger {
 			CancelInvoke ("OnMessage");
 			Invoke("OnMessage", 3f);
 			Invoke("messtext", 3f);
+			Debug.Log (Trigger00);
 		}
 	}
 

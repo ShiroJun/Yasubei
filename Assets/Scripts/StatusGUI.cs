@@ -3,29 +3,19 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class StatusGUI : GameController {
-
-
-	GameObject gameController;
 	public Text ExText;
 	public Text SpText;
 	public Text InvText;
 
 	void Start () {
-		
 	}
 	
 	void Update() {
 		ItemPow ();
-
 	}
 
 	void ItemPow(){
-		gameController = GameObject.Find ("GameController");									//クラスの指名
-		int I1 = ExPow;
-		int I2 = SpPow;
-		int I3 = Invent; 
-
-		switch (I1){
+		switch (ExPow){
 		case 1:
 			ExText.text = "壱";
 			break;
@@ -44,7 +34,7 @@ public class StatusGUI : GameController {
 		default:;
 			break;
 		}
-		switch (I2){
+		switch (SpPow){
 		case 1:
 			SpText.text = "壱";
 			break;
@@ -63,7 +53,7 @@ public class StatusGUI : GameController {
 		default:;
 			break;
 		}
-		switch (I3){
+		switch (Invent){
 		case 1:
 			InvText.text = "壱";
 			break;
