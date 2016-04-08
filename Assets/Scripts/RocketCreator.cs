@@ -3,8 +3,8 @@ using System.Collections;
 
 public class RocketCreator : MonoBehaviour {
     public GameObject Rocket;
-
-	void Start () {
+    public int RocketCount = 1;
+    void Start () {
 	
 	}
 
@@ -15,7 +15,12 @@ public class RocketCreator : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            Instantiate(Rocket, new Vector3(transform.position.x, 1f, transform.position.z), transform.rotation);
+            if (RocketCount == 1)
+            {
+                Instantiate(Rocket, new Vector3(transform.position.x, 1f, transform.position.z), transform.rotation);
+                RocketCount--;
+            }
+
 
         }
     }

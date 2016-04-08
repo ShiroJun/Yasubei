@@ -25,10 +25,15 @@ public class MessageGUI : ContactTrigger {
 	private bool timerflag = true;
 
 	void Start () {
-		SwitchList ();
+
+            SwitchList ();
 		msee0 ();
 		Awake ();
-	}
+        if (Application.loadedLevelName == "Stage1")
+        {
+            intList[8] = 1;
+        }
+    }
 
 	void Awake () {
 		if (Application.loadedLevelName == "Stage1") {
@@ -222,13 +227,15 @@ public class MessageGUI : ContactTrigger {
 	}
 
 	void Gooal(){
-		if (GoalArea == true && intList[8] == 0) {
-			MessageText.text = "おみっちゃん待っててくれ！";
-			intList[8] = 1;
-			CancelInvoke ("OnMessage");
-			CancelInvoke ("messtext5");
-			Invoke("OnMessage", 3f);
-			Invoke("OnClear", 3f);
+		if (GoalArea == true && intList[8] == 1) {
+
+                MessageText.text = "おみっちゃん待っててくれ！";
+                intList[8] = 2;
+                CancelInvoke("OnMessage");
+                CancelInvoke("messtext5");
+                Invoke("OnMessage", 3f);
+                Invoke("OnClear", 3f);
+            
 		}
 	}
 	void Goal(){
@@ -293,7 +300,6 @@ public class MessageGUI : ContactTrigger {
 		if(LP > 0 && EnemyTrigger1 == true){
 			RespawnText.text = "鈴木魂 : " + LP;
 			Invoke("Resp", 1f);
-			Debug.Log ("ああああ");
 		}
 	}
 	void Resp(){

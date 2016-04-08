@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityStandardAssets.CrossPlatformInput; // CrossPlatformInputManager を含む名前空間 CrossPlatforminputManager.csからもってきた
 
-public class YasubeiMovetest : PlayerLife
+public class YasubeiMovetest : Akudaikan
 {
     public float speed;
     GameObject gameController;
@@ -105,7 +105,7 @@ public class YasubeiMovetest : PlayerLife
 	}
     void OnTriggerEnter(Collider hit)
     {
-        if (hit.tag == "Enemy" && damage == false)
+        if (hit.tag == "Enemy" && damage == false && hp == 1 )
         {
             damage = true;
             this.tag = "Untagged";
@@ -114,7 +114,7 @@ public class YasubeiMovetest : PlayerLife
             PlayerLife.life--;
 
         }
-        if (hit.tag == "Bakufu" && damage == false)
+        if (hit.tag == "Bakufu" && damage == false && hp == 1)
         {
             damage = true;
             this.tag = "Untagged";

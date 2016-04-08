@@ -2392,6 +2392,10 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11460158, guid: 77221ac5fd7d57a42a19a7c7e12c76ba, type: 2}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 679076460}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77221ac5fd7d57a42a19a7c7e12c76ba, type: 2}
   m_IsPrefabParent: 0
@@ -3431,6 +3435,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d914b8c3d4990454f88ff8f58a25a2f6, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &679076460 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11435234, guid: d34339d2673aea14e973bf7b769b5436,
+    type: 2}
+  m_PrefabInternal: {fileID: 47548998}
+  m_Script: {fileID: 11500000, guid: 019d6b471e7d87e438430af1bdf81d06, type: 3}
 --- !u!4 &692160820 stripped
 Transform:
   m_PrefabParentObject: {fileID: 440978, guid: d914b8c3d4990454f88ff8f58a25a2f6, type: 2}
@@ -5061,6 +5071,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Rocket: {fileID: 182786, guid: 30342a83e2298084890ec7826f479517, type: 2}
+  RocketCount: 1
 --- !u!114 &1216348496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5074,6 +5085,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Rocket: {fileID: 190760, guid: 39f12070a9fa7ea428ceb18763b1af52, type: 2}
+  RocketCount: 1
 --- !u!114 &1216348497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5086,14 +5098,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c383bf2b9ebbace4c87cddd6799bda9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Trigger00: 0
-  Trigger01: 0
-  Trigger02: 0
-  Trigger03: 0
-  ItemTrigger1: 0
-  ItemTrigger2: 0
-  ItemTrigger3: 0
-  GoalArea: 0
+  Items: []
 --- !u!114 &1216348498
 MonoBehaviour:
   m_ObjectHideFlags: 0

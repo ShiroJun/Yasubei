@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Akudaikan : MonoBehaviour {
+public class Akudaikan : PlayerLife
+{
 
    // public Transform target;
     NavMeshAgent agent;

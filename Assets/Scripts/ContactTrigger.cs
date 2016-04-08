@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ContactTrigger : MonoBehaviour {
+public class ContactTrigger : Akudaikan {
 
 	private Animator anim;
 	public static bool Trigger00 = false;
@@ -37,10 +37,10 @@ public class ContactTrigger : MonoBehaviour {
 		} else if (hit.name.IndexOf ("Tegata") != -1) {
 			GoalArea = true;
 			anim.SetBool ("Victory", true);
-		} else if (hit.CompareTag ("Enemy")) {
+		} else if (hit.CompareTag ("Enemy") && hp == 1) {
 			//PlayerLife.life--;
 			EnemyTrigger1 = true;
-		}else if (hit.CompareTag ("Bakufu")) {
+		}else if (hit.CompareTag ("Bakufu") && hp == 1) {
 			//PlayerLife.life--;
 			EnemyTrigger1 = true;
 		}

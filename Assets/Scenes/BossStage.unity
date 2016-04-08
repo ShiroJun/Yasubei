@@ -1589,6 +1589,22 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 135800, guid: 77221ac5fd7d57a42a19a7c7e12c76ba, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 104998, guid: 77221ac5fd7d57a42a19a7c7e12c76ba, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11460158, guid: 77221ac5fd7d57a42a19a7c7e12c76ba, type: 2}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 760191290}
+    - target: {fileID: 11460158, guid: 77221ac5fd7d57a42a19a7c7e12c76ba, type: 2}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BombCreat2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77221ac5fd7d57a42a19a7c7e12c76ba, type: 2}
   m_IsPrefabParent: 0
@@ -1656,6 +1672,12 @@ Transform:
   - {fileID: 1056413076}
   m_Father: {fileID: 1060651763}
   m_RootOrder: 0
+--- !u!114 &760191290 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11435234, guid: d34339d2673aea14e973bf7b769b5436,
+    type: 2}
+  m_PrefabInternal: {fileID: 1445359387}
+  m_Script: {fileID: 11500000, guid: 019d6b471e7d87e438430af1bdf81d06, type: 3}
 --- !u!1001 &764090389
 Prefab:
   m_ObjectHideFlags: 0
@@ -2182,6 +2204,10 @@ Prefab:
     - target: {fileID: 8238904, guid: e6ecd7c8d9b7604438b5723e54893d17, type: 2}
       propertyPath: spreadCustomCurve.m_RotationOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 13609874, guid: e6ecd7c8d9b7604438b5723e54893d17, type: 2}
+      propertyPath: m_Radius
+      value: 0.19
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e6ecd7c8d9b7604438b5723e54893d17, type: 2}
