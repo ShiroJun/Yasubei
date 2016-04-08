@@ -170,7 +170,7 @@ public class MessageGUI : ContactTrigger {
 	}
 
 	public void messtext3(){
-		MessageText.text = "樽や敵を倒すと稀に道具がでるぜ！";
+		MessageText.text = "樽を壊すとたまに道具がでるぜ！";
 		MessageObject.SetActive (true);
 		CancelInvoke ("OnMessage");
 		Invoke("OnMessage", 3f);
