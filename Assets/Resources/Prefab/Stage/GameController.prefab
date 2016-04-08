@@ -41,7 +41,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5dd2e98dd5740a740b735f9055513fd6, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.6
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -119,9 +119,6 @@ MonoBehaviour:
   - {fileID: 159056, guid: 5ad1c9e821b2aa541aa3ba9862108b20, type: 2}
   - {fileID: 122370, guid: a44798da96a46874e89792cd837e38f2, type: 2}
   - {fileID: 179148, guid: 0d8feaf207cee7241990bf60b821a001, type: 2}
-  ExPow: 1
-  SpPow: 1
-  Invent: 1
 --- !u!114 &11435234
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -133,6 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 019d6b471e7d87e438430af1bdf81d06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Items: []
   pos: {fileID: 0}
   bomb: {fileID: 103256, guid: 16f4e065c7ab95c48b9907444066d63e, type: 2}
   FirewrksMixs:
