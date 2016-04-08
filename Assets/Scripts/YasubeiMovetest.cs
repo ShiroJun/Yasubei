@@ -106,20 +106,22 @@ public class YasubeiMovetest : PlayerLife
 	}
     void OnTriggerEnter(Collider hit)
     {
-        if (hit.tag == "Enemy")
-        {
-            damage = true;
-            anim.SetBool("Death", true);
-            this.tag = "Untagged"; 
-            Invoke("GameOverFlag", 2f);
-
-        }
-        if (hit.tag == "Bakufu")
+        if (hit.tag == "Enemy" && damage == false)
         {
             damage = true;
             this.tag = "Untagged";
             anim.SetBool("Death", true);
-            Invoke("GameOverFlag", 2f);
+            //Invoke("GameOverFlag", 2f);
+            PlayerLife.life--;
+
+        }
+        if (hit.tag == "Bakufu" && damage == false)
+        {
+            damage = true;
+            this.tag = "Untagged";
+            anim.SetBool("Death", true);
+            //Invoke("GameOverFlag", 2f);
+            PlayerLife.life--;
         }
         if (hit.CompareTag("Item"))
         {

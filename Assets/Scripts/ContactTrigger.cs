@@ -38,10 +38,10 @@ public class ContactTrigger : MonoBehaviour {
 			GoalArea = true;
 			anim.SetBool ("Victory", true);
 		} else if (hit.CompareTag ("Enemy")) {
-			PlayerLife.life--;
+			//PlayerLife.life--;
 			EnemyTrigger1 = true;
 		}else if (hit.CompareTag ("Bakufu")) {
-			PlayerLife.life--;
+			//PlayerLife.life--;
 			EnemyTrigger1 = true;
 		}
 		else if (hit.CompareTag ("Item")) {
