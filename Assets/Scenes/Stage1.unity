@@ -1229,7 +1229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Items: []
-  speed: 0.05
+  speed: 0.02
   notPass: 1
   damage: 0
 --- !u!114 &404603199

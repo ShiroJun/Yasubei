@@ -931,7 +931,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1
+  m_Text: "\u58F1"
 --- !u!114 &11404620
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1288,6 +1288,7 @@ MonoBehaviour:
   GameOverObject: {fileID: 135800}
   timer: 999
   timerText: {fileID: 11433920}
+  ButtonText: {fileID: 11449546}
 --- !u!114 &11443610
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2016,7 +2017,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1
+  m_Text: "\u58F1"
 --- !u!114 &11480170
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2049,7 +2050,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1
+  m_Text: "\u58F1"
 --- !u!114 &11481182
 MonoBehaviour:
   m_ObjectHideFlags: 1

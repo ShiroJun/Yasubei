@@ -17,7 +17,6 @@ public class YasubeiMovetest : PlayerLife
         Invoke("Destroy", 100);
         anim = GetComponent<Animator>();
         damage = false;
-        Debug.Log(life);
     }
     //private float y = 90;
     // Update is called once per frame
