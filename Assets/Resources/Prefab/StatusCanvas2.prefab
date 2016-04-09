@@ -359,6 +359,7 @@ GameObject:
   - 114: {fileID: 11486514}
   - 114: {fileID: 11433486}
   - 114: {fileID: 11476370}
+  - 114: {fileID: 11400934}
   m_Layer: 5
   m_Name: 'RocketButton '
   m_TagString: Untagged
@@ -851,6 +852,17 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 145676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e87a044bd26ae3346b7398818a95694d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11400934
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 135740}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e87a044bd26ae3346b7398818a95694d, type: 3}

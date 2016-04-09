@@ -1474,6 +1474,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Rocket: {fileID: 190760, guid: 39f12070a9fa7ea428ceb18763b1af52, type: 2}
   RocketCount: 1
+  rocketbutton: {fileID: 0}
 --- !u!114 &11416314
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1537,6 +1538,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Rocket: {fileID: 182786, guid: 30342a83e2298084890ec7826f479517, type: 2}
   RocketCount: 1
+  rocketbutton: {fileID: 0}
 --- !u!114 &11490686
 MonoBehaviour:
   m_ObjectHideFlags: 1

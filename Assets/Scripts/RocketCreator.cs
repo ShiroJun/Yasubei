@@ -5,8 +5,9 @@ using UnityStandardAssets.CrossPlatformInput;
 public class RocketCreator : MonoBehaviour {
     public GameObject Rocket;
     public int RocketCount = 1;
+    public GameObject rocketbutton;
     void Start () {
-	
+
 	}
 
 	void Update () {
@@ -20,9 +21,10 @@ public class RocketCreator : MonoBehaviour {
             {
                 Instantiate(Rocket, new Vector3(transform.position.x, 1f, transform.position.z), transform.rotation);
                 RocketCount--;
+                rocketbutton.GetComponent<UnityEngine.UI.Image>().enabled = false;
             }
 
-
         }
+        
     }
 }

@@ -27,7 +27,7 @@ public class YasubeiMovetest : Akudaikan
     }
     void FixedUpdate()
     {
-		PlayerControl ();
+		//PlayerControl ();
 		PlayerControl2 ();
     }
 	void PlayerControl(){
@@ -70,7 +70,7 @@ public class YasubeiMovetest : Akudaikan
 	}
 	void PlayerControl2(){
 		if (notPass == true && damage == false) {
-			if (Input.GetKey("up"))
+			if (Input.GetKey("up") || CrossPlatformInputManager.GetAxisRaw("Vertical")>0.4)
 			{
                 transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
                 transform.position += transform.forward * SPPOW;
@@ -83,19 +83,19 @@ public class YasubeiMovetest : Akudaikan
 				anim.SetBool("Run", false);
 			}
 
-            if (Input.GetKey("right"))
+            if (Input.GetKey("right") || CrossPlatformInputManager.GetAxisRaw("Horizontal") > 0.4)
 			{
                 transform.rotation = Quaternion.Euler(new Vector3(0, 90, 0));
                 transform.position += transform.forward * SPPOW;
                 anim.SetBool("Run", true);
             }
-			if (Input.GetKey("left"))
+			if (Input.GetKey("left") || CrossPlatformInputManager.GetAxisRaw("Horizontal") <-0.4)
 			{
                 transform.rotation = Quaternion.Euler(new Vector3(0, 270, 0));
                 transform.position += transform.forward * SPPOW;
                 anim.SetBool("Run", true);
             }
-            if (Input.GetKey("down"))
+            if (Input.GetKey("down") || CrossPlatformInputManager.GetAxisRaw("Vertical") < -0.4)
             {
                 transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
                 transform.position += transform.forward * SPPOW;
