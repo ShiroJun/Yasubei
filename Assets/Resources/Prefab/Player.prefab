@@ -853,8 +853,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 165532}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.48, z: 0}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071067}
+  m_LocalPosition: {x: 0.34, y: 0.48, z: 3.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 478210}
@@ -1432,7 +1432,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1473,6 +1473,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Rocket: {fileID: 190760, guid: 39f12070a9fa7ea428ceb18763b1af52, type: 2}
+  RocketCount: 1
 --- !u!114 &11416314
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1484,6 +1485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c383bf2b9ebbace4c87cddd6799bda9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Items: []
 --- !u!114 &11418468
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1534,6 +1536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Rocket: {fileID: 182786, guid: 30342a83e2298084890ec7826f479517, type: 2}
+  RocketCount: 1
 --- !u!114 &11490686
 MonoBehaviour:
   m_ObjectHideFlags: 1
