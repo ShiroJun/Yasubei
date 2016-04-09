@@ -10,8 +10,9 @@ public class Akudaikan : PlayerLife
     private Animator anim;
     public static int hp = 3;
     private GameObject bighanabi;
-    private GameObject gamec;
+    private GameObject bossbgm;
     private AudioSource audio;
+    private Rigidbody rigidbody;
 
     void Start()
     {
@@ -20,9 +21,9 @@ public class Akudaikan : PlayerLife
         cap = GetComponent<CapsuleCollider>();
         bighanabi = GameObject.Find("BigHanabi");
         bighanabi.SetActive(false);
-        gamec = GameObject.Find("GameController");
-        audio = gamec.GetComponent<AudioSource>();
-
+        bossbgm = GameObject.Find("BossBGM");
+        audio = bossbgm.GetComponent<AudioSource>();
+        rigidbody = GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -36,6 +37,7 @@ public class Akudaikan : PlayerLife
             anim.SetTrigger("Death");
             agent.enabled = false;
             cap.enabled = false;
+            rigidbody.constraints = RigidbodyConstraints.FreezeAll;
             //Invoke("Death", 3);
             Invoke("FireCreator", 4);
         }
@@ -48,12 +50,13 @@ public class Akudaikan : PlayerLife
         {
          anim.SetBool("Escape",true);
          Vector3 dir = this.transform.position - other.transform.position;
-         Vector3 pos = this.transform.position + dir * 2.5f;
+         Vector3 pos = this.transform.position + dir * 1.75f;
          agent.destination = pos;
         }
         if (other.gameObject.CompareTag("Bakufu"))
         {
             hp = hp-1;
+            Damagespace();
         }
 
     }
@@ -64,5 +67,14 @@ public class Akudaikan : PlayerLife
     void FireCreator()
     {
         bighanabi.gameObject.SetActive(true);
+    }
+    void Colliderset()
+    {
+        cap.enabled = true;
+    }
+    void Damagespace()
+    {
+        cap.enabled = false;
+        Invoke("Colliderset", 2);
     }
 }
