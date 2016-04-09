@@ -40,10 +40,10 @@ public class ContactTrigger : Akudaikan {
 		} else if (hit.name.IndexOf ("Tegata") != -1) {
 			GoalArea = true;
 			anim.SetBool ("Victory", true);
-		} else if (hit.CompareTag ("Enemy") && hp == 1) {
+		} else if (hit.CompareTag ("Enemy") && hp >= 1) {
 			//PlayerLife.life--;
 			EnemyTrigger1 = true;
-		}else if (hit.CompareTag ("Bakufu") && hp == 1) {
+		}else if (hit.CompareTag ("Bakufu") && hp >= 1) {
 			//PlayerLife.life--;
 			EnemyTrigger1 = true;
 		}

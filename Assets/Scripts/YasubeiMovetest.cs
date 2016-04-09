@@ -14,7 +14,7 @@ public class YasubeiMovetest : Akudaikan
     void Start()
     {
         this.tag = "Player";
-        Invoke("Destroy", 100);
+        //Invoke("Destroy", 100);
         anim = GetComponent<Animator>();
         damage = false;
     }
@@ -105,7 +105,7 @@ public class YasubeiMovetest : Akudaikan
 	}
     void OnTriggerEnter(Collider hit)
     {
-        if (hit.tag == "Enemy" && damage == false && hp == 1 )
+        if (hit.tag == "Enemy" && damage == false && hp >= 1 )
         {
             damage = true;
             this.tag = "Untagged";
@@ -114,7 +114,7 @@ public class YasubeiMovetest : Akudaikan
             PlayerLife.life--;
 
         }
-        if (hit.tag == "Bakufu" && damage == false && hp == 1)
+        if (hit.tag == "Bakufu" && damage == false && hp >= 1)
         {
             damage = true;
             this.tag = "Untagged";
