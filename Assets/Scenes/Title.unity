@@ -1206,6 +1206,47 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1442549637}
+--- !u!1 &1770403735
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1770403737}
+  - 114: {fileID: 1770403736}
+  m_Layer: 0
+  m_Name: Button3FlagCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1770403736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1770403735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 393dfb446a185104d9a840a1e6eb3372, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Items: []
+  buttn3: {fileID: 0}
+--- !u!4 &1770403737
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1770403735}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 508.5, y: 318, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
 --- !u!1 &1882006426
 GameObject:
   m_ObjectHideFlags: 0
@@ -1218,7 +1259,6 @@ GameObject:
   - 114: {fileID: 1882006432}
   - 114: {fileID: 1882006431}
   - 114: {fileID: 1882006429}
-  - 114: {fileID: 1882006428}
   - 114: {fileID: 1882006430}
   m_Layer: 5
   m_Name: Button3
@@ -1226,7 +1266,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1882006427
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1245,17 +1285,6 @@ RectTransform:
   m_AnchoredPosition: {x: -280, y: -150}
   m_SizeDelta: {x: 200, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1882006428
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1882006426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 014e650c90dc39d419af38641857951a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1882006429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1320,19 +1349,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 372933164}
-        m_MethodName: ToStage1
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1882006428}
-        m_MethodName: ButtonAudio
+      - m_Target: {fileID: 1882006430}
+        m_MethodName: ToMiniGameTutorial
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -2,7 +2,8 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class MiniGameSetting : NinjaCounts {
+public class MiniGameSettingFree : NinjaCounts
+{
 
     public Text miniGameTimeText;
     public Text miniGameCountDownText;
@@ -10,19 +11,18 @@ public class MiniGameSetting : NinjaCounts {
     public Text timeScore;
     public Text ninjaHighScore;
     public Text timeHighScore;
-    public GameObject stone;
+    //public GameObject stone;
     //生まれてくる敵プレハブ
     public GameObject enemyPrefab;
     //敵を格納
     GameObject[] existEnemys;
     //アクティブ最大数
-    public int maxEnemy = 20;
+    public int maxEnemy = 50;
     public float time2 = 0;
     public bool start = true;
     // Use this for initialization
     void Start()
     {
-        StoneCreate();
         ninjaCount = 0;
         CountDown3();
         //配列確保
@@ -37,7 +37,7 @@ public class MiniGameSetting : NinjaCounts {
         if (start == false)
         {
             time2 += Time.deltaTime;
-            miniGameTimeText.text = "時間：" + time2.ToString("0.00");
+            miniGameTimeText.text = "時間：" + time2.ToString("0.0");
         }
     }
 
@@ -93,54 +93,6 @@ public class MiniGameSetting : NinjaCounts {
         }
     }
 
-    void StoneCreate()
-    {
-        int rnd = Random.Range(7, 10);
-        GameObject [] array = new GameObject[rnd];
-
-        for (int i = 0; i < array.Length; i++)
-        {
-            array[i] = Instantiate(stone, new Vector3(-1f, 1f, -1f), transform.rotation) as GameObject; ;
-        }
-
-  
-
-        for (int i = 0; i < array.Length; i++)
-        {
-            int Check = 1; //1=重複判定
-            int rndX = 0;
-            int rndZ = 0;
-            while (Check == 1)
-            {
-                rndX = Random.Range(0, 17);
-                rndZ = Random.Range(0, 12);
-
-                for (int j = 0; j < array.Length; j++)
-                {
-                    if ((rndX > 6 && rndX < 9) || (rndZ > 4 && rndZ < 7))
-                    {
-                        Check = 1;
-                        break;
-                    }
-                    else if (array[j].transform.position.x == rndX && array[j].transform.position.z == rndZ)
-                    {
-                        Check = 1;
-                        break;
-                    }
-                    else
-                    {
-                        Check = 0;
-                    }                  
-                }
-                array[i].transform.position = new Vector3(rndX, 1f, rndZ);
-            }
-        }
-       
-
-
-
-    }
-
     void CountDown3()
     {
         miniGameCountDownText.text = "参";
@@ -167,4 +119,3 @@ public class MiniGameSetting : NinjaCounts {
 
     }
 }
-

@@ -8,9 +8,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 449768}
-  - 114: {fileID: 11497018}
   - 54: {fileID: 5477820}
   - 136: {fileID: 13661668}
+  - 114: {fileID: 11466352}
   - 82: {fileID: 8226758}
   m_Layer: 0
   m_Name: Rocketmini
@@ -167,7 +167,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11497018
+--- !u!114 &11466352
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -175,7 +175,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 130224}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12203698bbf613e42a8801400fd54bf5, type: 3}
+  m_Script: {fileID: 11500000, guid: 78684e79c74fe494291e8a02015a53c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   flag: 0
