@@ -3019,6 +3019,10 @@ Prefab:
       propertyPath: m_Name
       value: Tegata2
       objectReference: {fileID: 0}
+    - target: {fileID: 11472486, guid: d2c3e2a0a77264b48bf983c010a5fc25, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d2c3e2a0a77264b48bf983c010a5fc25, type: 2}
   m_IsPrefabParent: 0
