@@ -1681,7 +1681,7 @@ MonoBehaviour:
   RespawnObject: {fileID: 159838}
   RespawnText: {fileID: 11451014}
   GameOverObject: {fileID: 185074}
-  timer: 999
+  timer: 1000
   timerText: {fileID: 11411572}
   ButtonText: {fileID: 11426832}
 --- !u!114 &11443060

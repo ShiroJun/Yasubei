@@ -39,6 +39,7 @@ public class ContactTrigger : Akudaikan {
 			Trigger03 = true;
 		} else if (hit.name.IndexOf ("Tegata") != -1) {
 			GoalArea = true;
+			GetComponent<CapsuleCollider>().enabled = false;
 			anim.SetBool ("Victory", true);
 		} else if (hit.CompareTag ("Enemy") && hp >= 1) {
 			//PlayerLife.life--;
