@@ -3,15 +3,19 @@ using System.Collections;
 
 public class Button3FlagCheck : Akudaikan {
     int button3FlagInt = 0;
-    bool button3FlagBool = false;
+    public static bool button3FlagBool = false;
     public GameObject buttn3;
 	// Use this for initialization
 	void Start () {
         if (hp <= 0)
         {
-            buttn3.SetActive(true);
+            button3FlagBool = true;
         }
         hp = 3;
+        if (button3FlagBool == true)
+        {
+            buttn3.SetActive(true);
+        }
 	}
 	
 	// Update is called once per frame
