@@ -11,6 +11,7 @@ public class Button3FlagCheck : Akudaikan {
         {
             buttn3.SetActive(true);
         }
+        hp = 3;
 	}
 	
 	// Update is called once per frame
