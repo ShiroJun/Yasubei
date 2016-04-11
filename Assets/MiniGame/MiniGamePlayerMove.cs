@@ -199,7 +199,7 @@ public class MiniGamePlayerMove : GameController {
         }
         if ((NinjaCounts.ninjaCount * -1) > highNinja)
         {
-            PlayerPrefs.SetInt("HighScoreTime", (NinjaCounts.ninjaCount * -1));
+            PlayerPrefs.SetInt("HighScoreNinja", (NinjaCounts.ninjaCount * -1));
             highNinja = (NinjaCounts.ninjaCount * -1);
         }
         miniGameSetting.timeHighScore.text = "耐えた時間：" + highTime.ToString("0.00");

@@ -65,13 +65,13 @@ public class MessageGUI : ContactTrigger {
 	}
 	void SetKey(){
 		if (Application.loadedLevelName == "Stage1") {
-			PlayerPrefs.SetInt("Stage1", 999); 
+			PlayerPrefs.SetInt("highScore1", 999); 
 		}
 		if (Application.loadedLevelName == "Stage2") {
-			PlayerPrefs.SetInt("Stage2", 999); 
+			PlayerPrefs.SetInt("highScore2", 999); 
 		}
 		if (Application.loadedLevelName == "Stage3") {
-			PlayerPrefs.SetInt("Stage3", 999); 
+			PlayerPrefs.SetInt("highScore3", 999); 
 		}
 		if (Application.loadedLevelName == "BossStage") {
 			PlayerPrefs.SetInt("BossStage", 999); 
