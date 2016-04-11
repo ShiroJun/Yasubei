@@ -3947,18 +3947,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 190890, guid: fa6e680da801e6e43976cece6a5ea2a8, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 145676, guid: fa6e680da801e6e43976cece6a5ea2a8, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11442950, guid: fa6e680da801e6e43976cece6a5ea2a8, type: 2}
-      propertyPath: ButtonText
-      value: 
-      objectReference: {fileID: 1645486002}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fa6e680da801e6e43976cece6a5ea2a8, type: 2}
   m_IsPrefabParent: 0
@@ -4213,12 +4201,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d914b8c3d4990454f88ff8f58a25a2f6, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &1645486002 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11426832, guid: fa6e680da801e6e43976cece6a5ea2a8,
-    type: 2}
-  m_PrefabInternal: {fileID: 1489913422}
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1001 &1656870421
 Prefab:
   m_ObjectHideFlags: 0

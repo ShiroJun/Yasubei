@@ -111,7 +111,9 @@ public class YasubeiMovetest : Akudaikan
             this.tag = "Untagged";
             anim.SetBool("Death", true);
             //Invoke("GameOverFlag", 2f);
-            PlayerLife.life--;
+			if (Application.loadedLevelName != "Stage1") {
+				PlayerLife.life--;
+			}
 
         }
         if (hit.tag == "Bakufu" && damage == false && hp >= 1)
@@ -120,7 +122,9 @@ public class YasubeiMovetest : Akudaikan
             this.tag = "Untagged";
             anim.SetBool("Death", true);
             //Invoke("GameOverFlag", 2f);
-            PlayerLife.life--;
+			if (Application.loadedLevelName != "Stage1") {
+				PlayerLife.life--;
+			}
         }
         if (hit.CompareTag("Item"))
         {
