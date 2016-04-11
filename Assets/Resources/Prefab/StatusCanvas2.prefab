@@ -1251,18 +1251,18 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: ac58cd7d69e5e4341bc30dd21416e836, type: 3}
-    m_FontSize: 14
+    m_FontSize: 20
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 0
+    m_MaxSize: 300
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u6B21\u306B\u9032\u3080"
+  m_Text: "\u6B21\u3078\u9032\u3080"
 --- !u!114 &11428530
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1811,7 +1811,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.47586206, b: 0, a: 1}
+  m_Color: {r: 0.11764705, g: 0.16024327, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2228,7 +2228,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u9234\u6728\u6B21\u3078\u9032\u3080\uFF01"
+  m_Text: "\u5B8C\u5168\u5236\u8987\uFF01"
 --- !u!114 &11471272
 MonoBehaviour:
   m_ObjectHideFlags: 1
