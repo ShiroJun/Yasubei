@@ -1683,7 +1683,7 @@ MonoBehaviour:
   GameOverObject: {fileID: 185074}
   timer: 999
   timerText: {fileID: 11411572}
-  ButtonText: {fileID: 0}
+  ButtonText: {fileID: 11426832}
 --- !u!114 &11443060
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3053,7 +3053,7 @@ RectTransform:
   m_RootOrder: 7
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -170, y: -100}
+  m_AnchoredPosition: {x: 50, y: -80}
   m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &22428556
