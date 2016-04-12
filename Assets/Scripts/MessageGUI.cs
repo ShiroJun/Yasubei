@@ -337,7 +337,7 @@ public class MessageGUI : ContactTrigger {
 			Invoke("OnMessage", 3f);
 		}
 		if (ItemTrigger3 == true && intList[5] == 0) {
-			MessageText.text = "沢山持てるようになった！";
+			MessageText.text = "沢山置けるようになった！";
 			MessageObject.SetActive (true);
 			intList[5] = 1;
 			CancelInvoke ("OnMessage");
